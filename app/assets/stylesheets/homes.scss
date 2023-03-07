@@ -1,0 +1,447 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ *{
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1170;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    margin: 0;
+}
+
+p{
+    font-weight: normal;
+}
+
+
+.container {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+
+
+header{
+    height: 60px;
+    background-color: white;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header{
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.header-left{
+    float: left;
+}
+
+.header-left img{
+    width: 180px;
+    margin-top: 10px;
+}
+
+.fa-bars{
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(225, 225, 225, 0.9);
+    text-align: center;
+    padding: 60px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#close{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+#open.hide{
+    display: none;
+}
+
+.overlay ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay li{
+    margin-top: 25px;
+    font-size: 22px;
+    
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.overlay.show li{
+    opacity: 1;
+    transform: none;
+}
+
+.overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay.show li:nth-child(1){
+    transition-delay: 0.1s;
+}
+
+.overlay.show li:nth-child(2){
+    transition-delay: 0.2s;
+}
+
+.overlay.show li:nth-child(3){
+    transition-delay: 0.3s;
+}
+
+.overlay li a{
+    color: #222;
+}
+
+.overlay a:hover{
+    color: rgba(29, 192, 175, 0.8);
+    transition: all 0.2s ease-in-out 0s;
+}
+
+
+
+/*ヒーロー画面*/
+.top-wrapper{
+    background-color: #77E9DD;
+    margin-top: 50px;
+    padding: 60px 0 50px 0;
+    text-align: center;
+}
+
+.top-wrapper .logo{
+    width: 300px;
+}
+
+.top-wrapper h1{
+    color: #737575;
+    font-size: 25px;
+    line-height: 2;
+    margin-top: 13px;
+}
+
+
+
+/*ボタン*/
+.register-btn{
+    text-align: center;
+    margin: 60px auto;
+    
+}
+
+.btn{
+    display: inline-block;
+    color: white;
+    font-size: 23px;
+    padding: 12px 38px;
+    border-radius: 8px;
+    box-shadow:0 7px #2D9A97;
+    opacity: 0.7;
+}
+
+.register{
+    background-color: #21DAC7;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.btn:active{
+    position: relative;
+    top:7px;
+    box-shadow: none;
+}
+
+
+/*▼サービス概要部分*/
+.top-info1{
+    padding: 15px 20px;
+    background-color: #FCFB9D;
+}
+
+
+.top-info1 img{
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+.top-info1 h2{
+    font-size: 1em;
+}
+
+.top-info1 p{
+    font-size: 17px;
+}
+
+.top-info2{
+    padding: 15px 20px;
+}
+
+
+.top-info2 img{
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.top-info2 h2{
+    font-size: 1em;
+}
+
+.top-info2 p{
+    font-size: 17px;
+}
+
+
+.top-info3{
+    padding: 15px 20px;
+    background-color: #FCFB9D;
+}
+
+
+.top-info3 img{
+    display: block;
+    margin: auto;
+    width: 75%;
+}
+
+.top-info3 h2{
+    font-size: 1em;
+}
+
+.top-info3 p{
+    font-size: 17px;
+}
+
+.message-wrapper h3{
+    text-align: center;
+    margin: 80px 0 -20px 0;
+}
+
+
+/*フッター*/
+footer{
+    padding: 30px 0;
+}
+
+.footer-left img{
+    width: 100px;
+    margin-top: 70px;
+}
+
+.f-logo{
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+.footer-left ul{
+    padding: 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+.footer-left li{
+    list-style: none;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 4.4;
+}
+
+.footer-left  li a{
+    display: inline-block;
+    padding: 0 4%;
+    color: #222;
+}
+
+.footer-left a:hover{
+    opacity: 0.6;
+}
+
+.footer-right{
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.pc-menu{
+    display: none;
+}
+
+
+/*レスポンシブPC*/
+@media (min-width: 670px){
+    p{
+        font-weight: 600;
+    }
+    
+    .pc-menu{
+        display: block;
+    }
+    
+    .sp-menu{
+        display: none;
+    }
+    
+    .header-right{
+        text-align: right;
+        line-height: 59px;
+        transition:all 0.5s;
+    }
+    
+    .header-right a{
+        display: inline-block;
+        padding: 0 25px;
+        font-size: 17px;
+        color: #222;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    
+    .header-right .register{
+        color: white;
+        background-color: #76807B;
+    }
+    
+    .header-right .register:hover{
+        background-color: rgba(29, 192, 175, 0.5);
+    }
+    
+    .nav-link a:hover{
+        color: #21DAC7;
+    }
+    
+    
+    .top-wrapper{
+        background-color: #77E9DD;
+        padding: 90px 0;
+        text-align: center;
+    }
+    
+    .top-wrapper .logo{
+        display: inline-block;
+        vertical-align: middle;
+        width: 370px;
+    }
+    
+    .top-wrapper h1{
+        display: inline-block;
+        margin-left: 80px;
+        color: #737575;
+        font-size: 25px;
+    }
+    
+    
+    /*メイン部分*/
+    .main section{
+        display: flex;
+    }
+    
+  .top-info2 section{
+        flex-direction: row-reverse;
+    }
+    
+    .main section{
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    
+    .in-desc{
+        margin-top: 60px;
+    }
+    
+    .top-info1 .pic{
+        padding: 20px;
+    }
+    
+    .top-info1 img{
+        width: 100%;
+    }
+    
+    .main h2{
+        font-size: 1.3em;
+    }
+    
+    
+    
+    /*フッター*/
+    footer{
+        margin: 0 auto;
+        padding: 30px 0 0 30px;
+        align-items: flex-end;
+    }
+    
+    .footer-left{
+        display: inline;
+    }
+    
+    .footer-left ul{
+        border-top: 0;
+        margin: 0;
+    }
+    
+    .footer-left li{
+        display: inline;
+        border-bottom: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    
+    .footer-left  li a{
+        display: inline;
+        padding: 0 2% 0 1%;
+    }
+    
+    footer .f-nav{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer-right small{
+        float: right;
+        padding: 0 20px 30px 0;
+    }
+    
+    footer .footer-right{
+        position: relative;
+    }
+    
+}
+
