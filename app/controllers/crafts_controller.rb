@@ -13,4 +13,9 @@ class CraftsController < ApplicationController
         #新しい投稿がフォームからPostされたときに動作するアクション
         render plain: params["crafts"]["title"] + ":" + params["crafts"]["caption"]
     end
+    
+    def index
+      #導入用トップページが呼ばれたときに動作するアクション 
+        
+    end
 end
