@@ -48,6 +48,8 @@ GEM
     erubis (2.7.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    font-awesome-sass (5.4.1)
+      sassc (>= 1.11)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -130,6 +132,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -167,6 +171,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  font-awesome-sass (~> 5.4.1)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
