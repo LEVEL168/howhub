@@ -1,10 +1,12 @@
 <h3>新規投稿作成</h3>
+
+<p>ファイルを選択</p>
 <div class="form">
     <%= form_tag("/create") do %>
         <%= label_tag "crafts-title", "タイトル" %>
         <%= text_field :crafts, :title, id:"crafts-title",placeholder:"タイトル" %>
         <%= label_tag "crafts-caption", "キャプション" %>
-        <%= text_field :crafts, :caption, id:"crafts-caption",placeholder:"キャプション" %>
+        <%= text_field :crafts, :caption, id:"crafts-caption",placeholder:"投稿内容の補足や説明など" %>
         <%= submit_tag "投稿する" %>
     <% end %>   
 </div>
