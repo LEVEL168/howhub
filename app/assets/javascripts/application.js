@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require turbolinks
 //= require_tree .
 
-require('home')
+console.log('hoge')
 
 
