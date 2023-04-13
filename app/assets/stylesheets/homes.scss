@@ -58,6 +58,7 @@ header{
     margin-top: 10px;
 }
 
+// ハンバーガー
 .fa-bars{
     float: right;
     margin-top: 10px;
@@ -70,14 +71,14 @@ header{
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(225, 225, 225, 0.9);
+    background-color: rgba(232, 235, 238, 0.9);
     text-align: center;
     padding: 60px;
     opacity: 0;
     pointer-events: none;
 }
 
-#close{
+.close{
     position: absolute;
     top: 16px;
     right: 16px;
@@ -135,7 +136,14 @@ header{
     transition: all 0.2s ease-in-out 0s;
 }
 
+.overlay{
+    transform: translateX(100vw);
+    transition: all .3s linear;
+}
 
+.overlay.is-active{
+  transform: translateX(0);
+}
 
 /*ヒーロー画面*/
 .top-wrapper{
