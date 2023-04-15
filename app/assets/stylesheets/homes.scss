@@ -136,6 +136,7 @@ header{
     transition: all 0.2s ease-in-out 0s;
 }
 
+// ハンバーガースライドアニメ
 .overlay{
     transform: translateY(-200vw);
     transition: all .3s linear;
@@ -144,6 +145,7 @@ header{
 .overlay.is-active{
   transform: translateY(0);
 }
+
 
 /*ヒーロー画面*/
 .top-wrapper{
