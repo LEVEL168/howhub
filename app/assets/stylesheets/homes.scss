@@ -137,12 +137,12 @@ header{
 }
 
 .overlay{
-    transform: translateX(100vw);
+    transform: translateY(-200vw);
     transition: all .3s linear;
 }
 
 .overlay.is-active{
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 /*ヒーロー画面*/
