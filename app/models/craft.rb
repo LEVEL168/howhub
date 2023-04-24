@@ -1,3 +1,3 @@
 class Craft < ApplicationRecord
-    mount_uploader :image, ImgUploader
+    mount_uploader :image, ImageUploader
 end
