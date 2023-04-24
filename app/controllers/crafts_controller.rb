@@ -13,4 +13,9 @@ class CraftsController < ApplicationController
         #新しい投稿がフォームからPostされたときに動作するアクション
         render plain: params["crafts"]["title"] + ":" + params["crafts"]["caption"]
     end
+    
+    def user_params
+        params.require(:user).permit(:name, :email, :password, :image)
+    end
+    
 end
