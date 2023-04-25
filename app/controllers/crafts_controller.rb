@@ -1,11 +1,11 @@
 class CraftsController < ApplicationController
     def look
         #投稿一覧ページ（ログイン時トップページ）が呼ばれたときに動作するアクション
-        
+        @crafts = Craft.all
     end
     
     def new
-        #東欧作成ページが呼ばれたときに動作するアクション
+        #投稿作成ページが呼ばれたときに動作するアクション
         
     end
     
