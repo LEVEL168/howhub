@@ -11,7 +11,8 @@ class CraftsController < ApplicationController
     
     def create
         #新しい投稿がフォームからPostされたときに動作するアクション
-        render plain: params["crafts"]["title"] + ":" + params["crafts"]["caption"]
+        Craft.create(title:params["crafts"]["title"],caption:params["crafts"]["caption"])
+        redirect_to "/"
     end
     
     def user_params
