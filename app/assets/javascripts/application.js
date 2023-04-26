@@ -18,3 +18,17 @@
 console.log('hoge')
 
 
+/*global $*/
+$(function () {
+  $('#open').click(function () {
+    $('.overlay').toggleClass('show');
+    $('.fa-bars').hide();
+    $('.overlay').toggleClass('is-active');
+  });
+
+  $('.fa-times').click(function () {
+    $('.overlay').toggleClass('show');
+    $('.fa-bars').show();
+    $('.overlay').toggleClass('is-active');
+  });
+});
