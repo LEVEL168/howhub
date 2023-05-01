@@ -40,7 +40,7 @@
     <% @crafts.each do |craft| %>
         <!--これで→-->
         <div class="card">
-            <p><%= craft.title %>  <%= craft.caption %></p>
+            <p><%= craft.title %> <%= craft.caption %> <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a></p>
         </div>
         <!--←投稿1つ分-->
     <% end %>

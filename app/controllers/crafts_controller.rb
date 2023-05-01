@@ -15,6 +15,12 @@ class CraftsController < ApplicationController
         redirect_to "/"
     end
     
+    def destroy
+       craft = Craft.find(params["id"])
+       craft.destroy
+       redirect_to "/"
+    end
+    
     def user_params
         # モデルに保存されるパラメータを許可されたもの以外は処理しないようにする設定
         params.require(:user).permit(:name, :email, :password, :image)
