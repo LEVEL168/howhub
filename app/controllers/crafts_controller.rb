@@ -21,6 +21,18 @@ class CraftsController < ApplicationController
        redirect_to "/"
     end
     
+    def edit
+        @craft = Craft.find(params["id"])
+    end
+    
+    def update
+        craft = Craft.find(params["id"])
+        craft.title = params["crafts"]["title"]
+        craft.title = params["crafts"]["caption"]
+        craft.save
+        redirect_to "/"
+    end
+    
     def user_params
         # モデルに保存されるパラメータを許可されたもの以外は処理しないようにする設定
         params.require(:user).permit(:name, :email, :password, :image)

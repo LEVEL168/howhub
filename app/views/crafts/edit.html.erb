@@ -1,0 +1,11 @@
+<h3>投稿の編集</h3>
+
+<div class="form">
+    <%= form_tag("/crafts/"+@craft.id.to_s,:method=>:patch) do %>
+        <%= label_tag "crafts-title", "タイトル" %>
+        <%= text_field :crafts, :title, id:"crafts-title",value:@craft.title %>
+        <%= label_tag "crafts-caption", "キャプション" %>
+        <%= text_field :crafts, :caption, id:"crafts-caption",value:@craft.caption %>
+        <%= submit_tag "更新する" %>
+    <% end %>   
+</div>
