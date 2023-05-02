@@ -2,6 +2,8 @@ class CraftsController < ApplicationController
     def look
         #投稿一覧ページ（ログイン時トップページ）が呼ばれたときに動作するアクション
         @crafts = Craft.all
+        @crafts = Craft.search(params[:search])
+        # @search = params[:search]
     end
     
     def new

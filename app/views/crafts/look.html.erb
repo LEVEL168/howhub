@@ -36,6 +36,18 @@
     
     <a href="/new">投稿を作成</a>
     
+
+    <div id="search">
+        <%= form_tag "/", :method=>"get" do %>
+            <p>
+                <%= text_field_tag :search, params[:search], placeholder:"キーワードで探す" %>
+                <%= submit_tag "検索", :name => nil %>
+            </p>
+        <% end %>
+    </div>
+
+
+    
     <!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
     <% @crafts.each do |craft| %>
         <!--これで→-->
