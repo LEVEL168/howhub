@@ -36,6 +36,17 @@
     
     <a href="/new">投稿を作成</a>
     
+
+    <%= form_with local: true, method: :get do |form| %>
+      <%= form.text_field :keyword, placeholder:"キーワードで探す" %>
+      <%= form.submit '検索' %>
+    <% end %>
+    
+    <% if @keyword.present? %>
+      <%= "#{@keyword}の検索結果" %>
+    <% end %>
+
+    
     <!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
     <% @crafts.each do |craft| %>
         <!--これで→-->
