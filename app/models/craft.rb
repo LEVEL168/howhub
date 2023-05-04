@@ -18,12 +18,12 @@ class Craft < ApplicationRecord
 #   end
     
     
-    def self.search(search) #self.でクラスメソッドとしている
-        if search # Controllerから渡されたパラメータが!= nilの場合は、titleカラムを部分一致検索
-          Craft.where(['title LIKE ? OR caption LIKE ?', "%#{search}%", "%#{search}%"])
-        else
-          Craft.all
-        end
-    end
+    # def self.search(search) #self.でクラスメソッドとしている
+    #     if search # Controllerから渡されたパラメータが!= nilの場合は、titleカラムを部分一致検索
+    #       Craft.where(['title LIKE ? OR caption LIKE ?', "%#{search}%", "%#{search}%"])
+    #     else
+    #       Craft.all
+    #     end
+    # end
 end
 # end
