@@ -3,7 +3,7 @@
 <% if @crafts.empty? %>
   <p>該当する投稿はありません。</p>
 <% else %>
-  <%= @crafts.each do |craft| %>
+  <% @crafts.each do |craft| %>
     <p><%= craft.title %> <%= craft.caption %></p>
   <% end %>
 <% end %>
