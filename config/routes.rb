@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     delete "/crafts/:id", to:"crafts#destroy"
     get "/crafts/:id/edit", to:"crafts#edit"
     patch "/crafts/:id", to:"crafts#update"
+    get "/search", to:"crafts#search"
 end
