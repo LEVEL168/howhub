@@ -1,4 +1,9 @@
 class CraftsController < ApplicationController
+    def top
+       #導入ページが呼ばれたときに動作するアクション
+       
+    end
+    
     def look
         #投稿一覧ページ（ログイン時トップページ）が呼ばれたときに動作するアクション
         @crafts = Craft.all
