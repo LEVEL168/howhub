@@ -29,7 +29,7 @@ p{
 }
 
 
-.container {
+.top-container {
     width: calc(100% - 32px);
     margin: 0 auto;
 }
@@ -59,9 +59,9 @@ header{
 }
 
 // ハンバーガー
-.fa-bars{
+.fa{
     float: right;
-    margin-top: 10px;
+    margin: 10px;
     cursor: pointer;
 }
 
@@ -80,8 +80,8 @@ header{
 
 .close{
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 7px;
+    right: 4px;
     font-size: 45px;
     cursor: pointer;
 }
