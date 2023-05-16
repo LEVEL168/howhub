@@ -2,25 +2,27 @@
     <%= render "partial/login-nav" %>
 </header>
 
-<h3>投稿一覧（ログイン時トップページ）</h3>
-
-<a href="/new">投稿を作成</a>
-
-<%= form_with url: search_path, method: :get, local: true do |f| %>
-    <%= f.text_field :keyword, placeholder: "キーワード検索" %>
-    <%= f.submit "検索" %>
-<% end %>
-
-
-
-
-
-
-<!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
-<% @crafts.each do |craft| %>
-    <!--これで→-->
-    <div class="card">
-        <p><%= craft.title %> <%= craft.caption %> <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a> <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a></p>
-    </div>
-    <!--←投稿1つ分-->
-<% end %>
+<main>
+    <h3>投稿一覧（ログイン時トップページ）</h3>
+    
+    <a href="/new">投稿を作成</a>
+    
+    <%= form_with url: search_path, method: :get, local: true do |f| %>
+        <%= f.text_field :keyword, placeholder: "キーワード検索" %>
+        <%= f.submit "検索" %>
+    <% end %>
+    
+    
+    
+    
+    
+    
+    <!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
+    <% @crafts.each do |craft| %>
+        <!--これで→-->
+        <div class="card">
+            <p><%= craft.title %> <%= craft.caption %> <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a> <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a></p>
+        </div>
+        <!--←投稿1つ分-->
+    <% end %>
+</main>

@@ -2,12 +2,14 @@
     <%= render "partial/login-nav" %>
 </header>
 
-<%= @keywords %>の検索結果
-
-<% if @crafts.empty? %>
-  <p>該当する投稿はありません。</p>
-<% else %>
-  <% @crafts.each do |craft| %>
-    <p><%= craft.title %> <%= craft.caption %></p>
+<main>
+  <%= @keywords %>の検索結果
+  
+  <% if @crafts.empty? %>
+    <p>該当する投稿はありません。</p>
+  <% else %>
+    <% @crafts.each do |craft| %>
+      <p><%= craft.title %> <%= craft.caption %></p>
+    <% end %>
   <% end %>
-<% end %>
+</main>

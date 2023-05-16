@@ -4,10 +4,10 @@
 
 
 
-.top-container {
-    width: calc(100% - 32px);
-    margin: 0 auto;
-}
+// .top-container {
+//     width: calc(100% - 32px);
+//     margin: 0 auto;
+// }
 
 
 /*ヒーロー画面*/
@@ -19,7 +19,7 @@
 }
 
 .top-wrapper .logo{
-    width: 300px;
+    width: 50%;
 }
 
 .top-wrapper h1{
@@ -73,7 +73,7 @@
 .top-info1 img{
     display: block;
     margin: auto;
-    width: 90%;
+    width: 80%;
 }
 
 .top-info1 h2{
@@ -92,7 +92,7 @@
 .top-info2 img{
     display: block;
     margin: auto;
-    width: 80%;
+    width: 70%;
 }
 
 .top-info2 h2{
@@ -113,7 +113,7 @@
 .top-info3 img{
     display: block;
     margin: auto;
-    width: 75%;
+    width: 65%;
 }
 
 .top-info3 h2{

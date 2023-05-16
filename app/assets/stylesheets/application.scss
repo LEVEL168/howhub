@@ -46,11 +46,17 @@ p{
 }
 
 // top以外のcontainer
-.container {
+// .container {
+//     width: calc(100% - 32px);
+//     margin: 0 auto;
+// }
+
+
+main {
+    padding-top: 50px;
     width: calc(100% - 32px);
     margin: 0 auto;
 }
-
 
 
 header{
@@ -73,6 +79,7 @@ header{
 .header-left img{
     width: 180px;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 // ハンバーガー
