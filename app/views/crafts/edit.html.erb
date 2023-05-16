@@ -7,10 +7,14 @@
     
     <div class="craft-form">
         <%= form_tag("/crafts/"+@craft.id.to_s,:method=>:patch) do %>
-           <p class="f-headline"><%= label_tag "crafts-title", "タイトル" %></p>
-            <%= text_field :crafts, :title, id:"crafts-title",value:@craft.title %>
-            <p class="f-headline"><%= label_tag "crafts-caption", "キャプション" %></p>
-            <%= text_field :crafts, :caption, id:"crafts-caption",value:@craft.caption %>
+            <div class="title">
+               <p class="f-headline"><%= label_tag "crafts-title", "タイトル" %></p>
+                <%= text_field :crafts, :title, id:"crafts-title",value:@craft.title %>
+            </div>
+            <div class="caption">
+                <p class="f-headline"><%= label_tag "crafts-caption", "キャプション" %></p>
+                <%= text_field :crafts, :caption, id:"crafts-caption",value:@craft.caption %>
+            </div>
             <%= submit_tag "更新する" %>
         <% end %>   
     </div>

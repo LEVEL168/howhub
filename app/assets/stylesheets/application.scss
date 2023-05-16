@@ -211,3 +211,18 @@ header{
         color: #21DAC7;
     }
 }
+
+// edit/new
+.title{
+    input[type="text"]{
+        width: 90%;
+        height: 25px;
+    }
+}
+
+.caption{
+    input[type="text"]{
+        width: 90%;
+        height: 200px;
+    }
+}
