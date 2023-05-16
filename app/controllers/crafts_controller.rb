@@ -43,7 +43,7 @@ class CraftsController < ApplicationController
     def update
         craft = Craft.find(params["id"])
         craft.title = params["crafts"]["title"]
-        craft.title = params["crafts"]["caption"]
+        craft.caption = params["crafts"]["caption"]
         craft.save
         redirect_to "/"
     end
