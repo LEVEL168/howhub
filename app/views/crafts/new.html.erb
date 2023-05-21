@@ -5,16 +5,20 @@
 <main>
     <h3>新規投稿作成</h3>
     
-    <p>ファイルを選択</p>
+    <p class="img-text">ファイルを選択</p>
     
     
-    <div class="new-form">
+    <div class="craft-form">
         <%= form_tag("/create") do %>
-            <%= label_tag "crafts-title", "タイトル" %>
-            <%= text_field :crafts, :title, id:"crafts-title",placeholder:"タイトル" %>
-            <%= label_tag "crafts-caption", "キャプション" %>
-            <%= text_field :crafts, :caption, id:"crafts-caption",placeholder:"投稿内容の補足や検索ワードなど" %>
-            <%= submit_tag "投稿する" %>
+            <div class="title">
+                <p class="f-headline"><%= label_tag "crafts-title", "タイトル" %></p>
+                <p class="f-title"><%= text_field :crafts, :title, id:"crafts-title",placeholder:"タイトル", style: "width:100%" %></p>
+            </div>
+            <div class="caption">
+                <p class="f-headline"><%= label_tag "crafts-caption", "キャプション" %></p>
+                <p class="f-caption"><%= text_area :crafts, :caption, id:"crafts-caption",placeholder:"投稿内容の補足や検索ワードなど", style: "width:100%", rows: "15" %></p>
+            </div>
+            <div class="submit-btn"><%= submit_tag "投稿する", class: "submit" %></div>
         <% end %>   
     </div>
 </main>
