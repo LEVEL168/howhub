@@ -212,7 +212,9 @@ header{
     }
 }
 
-// edit/new --スマホ版
+
+
+// -------------------edit/new --スマホ版----------------------------------
 .title{
     input[type="text"]{
         flex-grow: 1;
@@ -221,11 +223,15 @@ header{
 }
 
 .f-caption{
-        flex-grow: 1;
+    flex-grow: 1;
 }
 
 .f-headline{
     margin-bottom: -18px;
+}
+
+.img-text{
+    text-align: center;
 }
 
 .submit{
@@ -238,12 +244,37 @@ header{
     font-size: 18px;
 }
 
-// .btn:hover{
-//     opacity: 1;
-// }
-
-// .btn:active{
-//     position: relative;
-//     top:7px;
-//     box-shadow: none;
-// }
+// -------------------edit/new --PC版----------------------------------
+@media (min-width: 670px){
+    p{
+        font-weight: 600;
+    }
+    
+    .pc-menu{
+        display: block;
+    }
+    
+    #open{
+        display: none;
+    }
+    
+   main{
+       margin: auto;
+       max-width: 1200px;
+   }
+   
+   .submit{
+        width: 200px;
+        height: 65px;
+        background-color: #66cdaa;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    .submit-btn{
+        text-align: center;
+    }
+}
