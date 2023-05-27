@@ -4,8 +4,13 @@
 
 <main>
     <h3>新規投稿作成</h3>
-    
     <p class="img-text">ファイルを選択</p>
+    
+    <%= form_with url: "/search", method: :get do |form| %>
+        <%= form.label :crafts, :img %>
+        <%= form.file_field :img, id: :craft_img %>
+    <% end %> 
+    <!--url: "/search"は何の引数を表記するのか調べる-->
     
     
     <div class="craft-form">
