@@ -48,6 +48,14 @@ class CraftsController < ApplicationController
         redirect_to "/"
     end
     
+    def signup
+        # User.create(name:params["users"]["name"],mail:params["users"]["mail"],password:params["users"]["password"])
+        # redirect_to "/"
+    end
+    # ↑コントローラ分ける？
+    
+    
+    
     def user_params
         # モデルに保存されるパラメータを許可されたもの以外は処理しないようにする設定
         params.require(:user).permit(:name, :email, :password, :image)

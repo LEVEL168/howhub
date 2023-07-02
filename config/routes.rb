@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     get "/crafts/:id/edit", to:"crafts#edit"
     patch "/crafts/:id", to:"crafts#update"
     get "/search", to:"crafts#search"
+    get "/signup", to:"crafts#signup"
 end
