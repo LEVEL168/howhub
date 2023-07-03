@@ -26,7 +26,7 @@ class CraftsController < ApplicationController
     
     def create
         #新しい投稿がフォームからPostされたときに動作するアクション
-        Craft.create(title:params["crafts"]["title"],caption:params["crafts"]["caption"])
+        Craft.create!(title:params["crafts"]["title"],caption:params["crafts"]["caption"],image:params["crafts"]["image"])
         redirect_to "/"
     end
     
