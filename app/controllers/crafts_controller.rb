@@ -1,7 +1,6 @@
 class CraftsController < ApplicationController
     def top
        #導入ページが呼ばれたときに動作するアクション
-       
     end
     
     def look
@@ -21,13 +20,17 @@ class CraftsController < ApplicationController
     
     def new
         #投稿作成ページが呼ばれたときに動作するアクション
-        
+        @craft = Craft.new
     end
     
     def create
         #新しい投稿がフォームからPostされたときに動作するアクション
-        Craft.create(title:params["crafts"]["title"],caption:params["crafts"]["caption"])
-        redirect_to "/"
+        @craft = Craft.new
+        
+        Craft.create(craft_params)
+        redirect_to root_path
+        # Craft.create(title:params["crafts"]["title"],caption:params["crafts"]["caption"],image:params["crafts"]["image"])
+        # redirect_to "/"
     end
     
     def destroy
@@ -46,6 +49,10 @@ class CraftsController < ApplicationController
         craft.caption = params["crafts"]["caption"]
         craft.save
         redirect_to "/"
+    end
+    
+    def craft_params
+        params.require(:craft).permit(:title, :caption, :image)
     end
     
     def user_params
