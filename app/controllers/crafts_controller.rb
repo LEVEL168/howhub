@@ -29,26 +29,22 @@ class CraftsController < ApplicationController
         
         Craft.create(craft_params)
         redirect_to root_path
-        # Craft.create(title:params["crafts"]["title"],caption:params["crafts"]["caption"],image:params["crafts"]["image"])
-        # redirect_to "/"
     end
     
     def destroy
        craft = Craft.find(params["id"])
        craft.destroy
-       redirect_to "/"
+       redirect_to root_path
     end
     
     def edit
-        @craft = Craft.find(params["id"])
+        @craft = Craft.find(params[:id])
     end
     
     def update
-        craft = Craft.find(params["id"])
-        craft.title = params["crafts"]["title"]
-        craft.caption = params["crafts"]["caption"]
-        craft.save
-        redirect_to "/"
+        @craft = Craft.find(params[:id])
+        @craft = @craft.update(craft_params)
+        redirect_to root_path
     end
     
     def craft_params

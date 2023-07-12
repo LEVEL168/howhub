@@ -1,0 +1,62 @@
+[33m8491602[m[33m ([m[1;36mHEAD -> [m[1;32mhotfix_59[m[33m)[m フォーム・コントローラ修正完了
+[33m4c0f344[m controller修正完了
+[33m7c73ed9[m routes,form,controller修正中
+[33m0563b44[m[33m ([m[1;32mmaster[m[33m)[m Merge pull request #55 from yuina-honda/feature_img_9
+[33m802a2b1[m 画像投稿フォームのみ作成
+[33mbde8a97[m Merge pull request #52 from yuina-honda/feature_39_scss
+[33m1b1548a[m edit/newのcss適用完了
+[33m0111f97[m Merge pull request #50 from yuina-honda/feature_39_scss
+[33m36155c5[m editのcss適用
+[33md35c977[m editのscss編集
+[33m28f50a3[m 各ページcss記入中 nav微調整
+[33m4f42ec2[m Merge pull request #49 from yuina-honda/feature_39_scss
+[33mab4e523[m 更新機能の修正完了
+[33mb207b76[m Merge pull request #46 from yuina-honda/feature_39_scss
+[33mab16820[m ハンバーガーnavの表示修正
+[33m844a651[m Merge pull request #37 from yuina-honda/feature_31_css
+[33ma5c4453[m ハンバーガーのアイコン位置修正完了
+[33m499c4bb[m partial作成 nav周りcss調整
+[33maea91e2[m Merge pull request #36 from yuina-honda/feature_14_search
+[33m76bdc0a[m 検索機能完成
+[33m08219e6[m 複数ワード検索機能つづき
+[33m5176de4[m Merge pull request #35 from yuina-honda/feature_14_search
+[33m56b511d[m Railsバージョンアップグレード
+[33m74aae40[m 1ワードでの検索機能実装
+[33mc3b4e31[m Merge pull request #34 from yuina-honda/feature_18_edit
+[33mdcfe848[m 投稿編集機能実装完了
+[33mb01fbb9[m Merge pull request #33 from yuina-honda/feature_22_delete
+[33ma4eb947[m 投稿削除機能実装完了
+[33mbc9ef0c[m JS適用イシュー削除用コミット
+[33m124e321[m Merge pull request #28 from yuina-honda/feature_system
+[33mdee5a47[m 導入ページのハンバーガーメニュー適用完了
+[33m1c009d9[m Merge pull request #25 from yuina-honda/feature_system
+[33m41a9fc6[m 重複点のコメント
+[33m00a4202[m nav全ページ適用、投稿一覧のタイトル表示
+[33m7054888[m 投稿作成時のデータをDBに反映
+[33m0f2abc2[m コントローラ説明追加、img→image表記へ
+[33m075392f[m CarrierWave導入・Strong Parameter設定
+[33m1851b77[m Merge pull request #23 from yuina-honda/feature_system
+[33m821baf9[m テーブル・マイグレーションの削除、作成し直し
+[33m9400beb[m Merge pull request #21 from yuina-honda/feature_system
+[33m3cc32ea[m ハンバーガー微調整
+[33mff9517a[m Merge pull request #19 from yuina-honda/feature_system
+[33m21fc8f9[m ハンバーガーメニューclose実装
+[33m29216a9[m フェードインを横から上下に変更
+[33m7d528f6[m Merge pull request #16 from yuina-honda/feature_system
+[33m75d9837[m ハンバーガー閉じるアクション以外実装
+[33m415a148[m Merge pull request #13 from yuina-honda/feature_system
+[33ma733de9[m jQueryが正しく導入されている所を確認/turbolinkを戻した
+[33mcdc167e[m js適用のためturbolink削除
+[33md7df68d[m Merge pull request #6 from yuina-honda/feature_view
+[33m562d916[m Merge pull request #5 from yuina-honda/feature_how13
+[33ma9e0328[m 不要なコントローラ削除
+[33md73cee3[m 投稿作成ページのerbのみ作成
+[33m529e696[m Merge pull request #4 from yuina-honda/feature_how2
+[33m2735778[m font-awesomeのgemを元に戻した
+[33m195f059[m Merge pull request #3 from yuina-honda/feature_how2
+[33me388490[m js_coffee全削除/home.js作成
+[33me6bc6cc[m Merge pull request #2 from yuina-honda/feature_how2
+[33mb72d2be[m ファビコンフォルダ移動と設定
+[33m601bea8[m Merge pull request #1 from yuina-honda/feature_how2
+[33m77cf782[m トップページのHTML,CSS適用
+[33m8671a92[m[33m ([m[1;32mcloud9[m[33m)[m inscription
