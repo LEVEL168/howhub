@@ -1,5 +1,5 @@
 class CraftsController < ApplicationController
-    def top
+      def top
        #導入ページが呼ばれたときに動作するアクション
     end
     
@@ -55,9 +55,5 @@ class CraftsController < ApplicationController
     #     # モデルに保存されるパラメータを許可されたもの以外は処理しないようにする設定
     #     params.require(:user).permit(:name, :email, :password, :image)
     # end
-    
-    def craft_params
-        params.require(:crat).permit(:title, :caption, :img)
-    end
     
 end
