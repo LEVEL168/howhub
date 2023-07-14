@@ -9,20 +9,23 @@
         <%= form.label :craft_img, "画像を追加" %>
         <%= form.file_field :img, id: :craft_img %>
     <% end %> 
-    <!--url: "/search"は何の引数を表記するのか調べる-->
+
+
     
-    
-    <div class="craft-form">
-        <%= form_tag("/create") do %>
-            <div class="title">
-                <p class="f-headline"><%= label_tag "crafts-title", "タイトル" %></p>
-                <p class="f-title"><%= text_field :crafts, :title, id:"crafts-title",placeholder:"タイトル", style: "width:100%" %></p>
-            </div>
-            <div class="caption">
-                <p class="f-headline"><%= label_tag "crafts-caption", "キャプション" %></p>
-                <p class="f-caption"><%= text_area :crafts, :caption, id:"crafts-caption",placeholder:"投稿内容の補足や検索ワードなど", style: "width:100%", rows: "15" %></p>
-            </div>
-            <div class="submit-btn"><%= submit_tag "投稿する", class: "submit" %></div>
-        <% end %>   
-    </div>
+    <%= form_with(model: @craft, local: true) do |form| %>
+        <div class="title">
+            <%= form.label :title, "タイトル" %>
+            <%= form.text_field :title, class: "form-text", placeholder:"タイトル", style: "width:100%" %>
+        </div>
+        
+        <div class="f-caption">
+            <%= form.label :caption, "キャプション" %>
+            <%= form.text_area :caption, class: "form-text", placeholder:"投稿内容の補足や検索ワードなど", style: "width:100%", rows: "15" %>
+        </div>
+        
+        <div class="submit-btn">
+            <%= form.submit "投稿する", class: "submit" %>
+        </div>
+    <% end %>
+ 
 </main>

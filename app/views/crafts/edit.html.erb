@@ -5,17 +5,22 @@
 <main>
     <h3>投稿の編集</h3>
     
-    <div class="craft-form">
-        <%= form_tag("/crafts/"+@craft.id.to_s,:method=>:patch) do %>
-            <div class="title">
-               <p class="f-headline"><%= label_tag "crafts-title", "タイトル" %></p>
-               <p class="f-title"><%= text_field :crafts, :title, id:"crafts-title",value:@craft.title, style: "width:100%" %>
-            </div>
-            <div class="caption">
-                <p class="f-headline"><%= label_tag "crafts-caption", "キャプション" %></p>
-                <p class="f-caption"><%= text_area :crafts, :caption, id:"crafts-caption",value:@craft.caption, style: "width:100%", rows: "15" %></p>
-            </div>
-            <div class="submit-btn"><%= submit_tag "更新する", class: "submit" %></div>
-        <% end %>   
+    <%= form_with(model: @craft, local: true) do |form| %>
+        <div class="title">
+            <%= form.label :title, "タイトル" %>
+            <%= form.text_field :title, class: "form-text", value:@craft.title, style: "width:100%" %>
+        </div>
+        
+        <div class="f-caption">
+            <%= form.label :caption, "キャプション" %>
+            <%= form.text_area :caption, class: "form-text", value:@craft.caption, style: "width:100%", rows: "15" %>
+        </div>
+        
+        <div class="submit-btn">
+            <%= form.submit "更新する", class: "submit" %>
+        </div>
+    <% end %>
+    
+    
     </div>
 </main>
