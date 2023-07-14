@@ -56,4 +56,8 @@ class CraftsController < ApplicationController
     #     params.require(:user).permit(:name, :email, :password, :image)
     # end
     
+    def craft_params
+        params.require(:crat).permit(:title, :caption, :img)
+    end
+    
 end
