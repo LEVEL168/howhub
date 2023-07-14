@@ -5,7 +5,7 @@
 <main>
     <h3>投稿一覧（ログイン時トップページ）</h3>
     
-    <a href="/new">投稿を作成</a>
+    <a href="/crafts/new">投稿を作成</a>
     
     <%= form_with url: search_path, method: :get, local: true do |f| %>
         <%= f.text_field :keyword, placeholder: "キーワード検索" %>
