@@ -14,14 +14,14 @@
     
     
     
-    
-    
-    
     <!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
     <% @crafts.each do |craft| %>
         <!--これで→-->
         <div class="card">
-            <p><%= craft.title %> <%= craft.caption %> <%= image_tag craft.image_url, size: '100x100' %> <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a> <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a></p>
+            <a href="/crafts/<%= craft.id %>">
+                <p><%= image_tag craft.image_url, size: '150x150' %></p>
+                <p><%= craft.title %></p>
+            </a>
         </div>
         <!--←投稿1つ分-->
     <% end %>

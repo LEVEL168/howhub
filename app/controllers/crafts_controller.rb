@@ -46,6 +46,12 @@ class CraftsController < ApplicationController
         redirect_to root_path
     end
     
+    def show
+       @craft = Craft.all
+       @craft = Craft.find(params[:id]) 
+    end
+    
+    
     def craft_params
         params.require(:craft).permit(:title, :caption, :image)
     end

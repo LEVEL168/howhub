@@ -9,20 +9,24 @@
     <%= form_with(model: @craft, local: true) do |form| %>
         <div class="image">
             <%= form.label :image, "画像を追加" %>
-            <%= form.file_field :image, class: :craft_img, accept: 'image/*' %>
+            <%= form.file_field :image, class: "craft_img", accept: 'image/*' %>
+            <%= form.hidden_field :image_cache %>
+            <%= image_tag(@craft.image.url) if @craft.image? %>
         </div>
-        <p>jpg/jpeg/png</p>
+        <p>jpg/jpeg/png 2MBまで</p>
         <span>※投稿後の画像の編集はできません</span>
         <%= image_tag @craft.image.url if @craft.image? %>
         
         <div class="title">
             <%= form.label :title, "タイトル" %>
             <%= form.text_field :title, class: "form-text", placeholder:"タイトル", style: "width:100%" %>
+            <%= form.hidden_field :title_cache %>
         </div>
         
         <div class="f-caption">
             <%= form.label :caption, "キャプション" %>
             <%= form.text_area :caption, class: "form-text", placeholder:"投稿内容の補足や検索ワードなど", style: "width:100%", rows: "15" %>
+            <%= form.hidden_field :caption_cache %>
         </div>
         
         <div class="submit-btn">
