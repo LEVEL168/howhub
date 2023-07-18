@@ -1,5 +1,5 @@
 class CraftsController < ApplicationController
-      def top
+    def top
        #導入ページが呼ばれたときに動作するアクション
     end
     
@@ -26,7 +26,6 @@ class CraftsController < ApplicationController
     def create
         #新しい投稿がフォームからPostされたときに動作するアクション
         @craft = Craft.new
-        
         Craft.create(craft_params)
         redirect_to root_path
     end
