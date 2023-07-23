@@ -25,14 +25,20 @@ class CraftsController < ApplicationController
     
     def create
         #新しい投稿がフォームからPostされたときに動作するアクション
-        @craft = Craft.new
-        Craft.create(craft_params)
-        redirect_to root_path
+        @craft = Craft.new(craft_params)
+        if @craft.save
+            flash[:notice] = "投稿しました！" 
+            redirect_to root_path
+        else
+            flash.now[:alert] = "※タイトルとキャプションを入力してください"
+            render "new"
+        end
     end
     
     def destroy
-       craft = Craft.find(params["id"])
-       craft.destroy
+       @craft = Craft.find(params[:id])
+       @craft.destroy
+       flash[:notice] = "投稿を削除しました"
        redirect_to root_path
     end
     
@@ -42,8 +48,13 @@ class CraftsController < ApplicationController
     
     def update
         @craft = Craft.find(params[:id])
-        @craft = @craft.update(craft_params)
-        redirect_to root_path
+        if @craft.update(craft_params)
+            flash[:notice] = "投稿を更新しました"
+            redirect_to root_path(@craft)
+        else
+            flash.now[:alert] = "※タイトルとキャプションを入力してください"
+            render "edit"
+        end
     end
     
     def show
