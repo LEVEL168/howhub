@@ -25,6 +25,7 @@ class CraftsController < ApplicationController
     
     def create
         #新しい投稿がフォームからPostされたときに動作するアクション
+<<<<<<< HEAD
         @craft = Craft.new(craft_params)
         if @craft.save
             flash[:notice] = "投稿しました！" 
@@ -33,6 +34,10 @@ class CraftsController < ApplicationController
             flash.now[:alert] = "※タイトルとキャプションを入力してください"
             render "new"
         end
+=======
+        Craft.create!(title:params["crafts"]["title"],caption:params["crafts"]["caption"],image:params["crafts"]["image"])
+        redirect_to "/"
+>>>>>>> c67446579d2a3dc07f36bafc9e46b96820bc67c9
     end
     
     def destroy
