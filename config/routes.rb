@@ -3,4 +3,5 @@ Rails.application.routes.draw do
     resources :crafts
     get "/top", to:"crafts#top"
     get "/search", to:"crafts#search"
+    get "/signup", to:"crafts#signup"
 end
