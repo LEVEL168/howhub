@@ -33,9 +33,9 @@ class ImageUploader < CarrierWave::Uploader::Base
     # process resize_to_fit: [100, 100, "Center"]
   # end
   
-  version :medium do
-    process resize_to_fill: [100, 100, "Center"]
-  end
+  # version :medium do
+    process resize_to_fill: [150, 150, "Center"]
+  # end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
