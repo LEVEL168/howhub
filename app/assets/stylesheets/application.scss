@@ -245,6 +245,12 @@ header{
     font-size: 18px;
 }
 
+.attention{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: -3px;
+}
+
 // -------------------edit/new --PC版----------------------------------
 @media (min-width: 670px){
     p{
@@ -278,4 +284,21 @@ header{
     .submit-btn{
         text-align: center;
     }
+}
+
+
+// -------------------アラート---------------------------------------
+.alert{
+    background-color: #ccffcc;
+    margin-top: 60px;
+    margin-bottom: -60px;
+    padding: 15px 25px;
+}
+
+.warning{
+    background-color: #ffcccc;
+    margin-top: -13px;
+    margin-bottom: 13px;
+    padding: 15px 25px;
+    font-size: 16px;
 }

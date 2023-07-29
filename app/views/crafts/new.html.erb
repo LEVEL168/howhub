@@ -5,17 +5,15 @@
 <main>
     <h3>新規投稿作成</h3>
     
-    
     <%= form_with(model: @craft, local: true) do |form| %>
-    <%= render "partial/errors_messages", model: form.object %>
+        <%= render "partial/errors_messages", model: form.object %>
         <div class="image">
             <%= form.label :image, "画像を追加" %>
             <%= form.file_field :image, class: "craft_img", accept: 'image/*' %>
             <%= form.hidden_field :image_cache %>
         </div>
-        <p>jpg/jpeg/png 2MBまで</p>
-        <span>※投稿後の画像の編集はできません</span>
-        <%= image_tag @craft.image.url if @craft.image? %>
+        <p class="attention">jpg/jpeg/png 2MBまで<br>
+            ※投稿後の画像の編集はできません</p>
         
         <div class="title">
             <%= form.label :title, "タイトル" %><span class="necessary">*</span>

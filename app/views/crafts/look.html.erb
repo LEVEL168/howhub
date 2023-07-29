@@ -2,7 +2,11 @@
     <%= render "partial/login-nav" %>
 </header>
 
-<%= render "partial/errors_messages" %>
+<% flash.each do |message_type, message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+<% end %>
 
 <main>
     <h3>投稿一覧（ログイン時トップページ）</h3>
@@ -20,16 +24,12 @@
     <% @crafts.each do |craft| %>
         <!--これで→-->
         <div class="card">
-<<<<<<< HEAD
             <a href="/crafts/<%= craft.id %>">
                 <p><%= image_tag craft.image_url %></p>
                 <p><%= craft.title %></p>
                 <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a>
                 <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a>
             </a>
-=======
-            <p><%= craft.title %> <%= craft.caption %> <%= craft.image %> <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a> <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a></p>
->>>>>>> c67446579d2a3dc07f36bafc9e46b96820bc67c9
         </div>
         <!--←投稿1つ分-->
     <% end %>
