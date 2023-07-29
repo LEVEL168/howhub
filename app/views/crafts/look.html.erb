@@ -2,10 +2,16 @@
     <%= render "partial/login-nav" %>
 </header>
 
+<% flash.each do |message_type, message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+<% end %>
+
 <main>
     <h3>投稿一覧（ログイン時トップページ）</h3>
     
-    <a href="/new">投稿を作成</a>
+    <a href="/crafts/new">投稿を作成</a>
     
     <%= form_with url: search_path, method: :get, local: true do |f| %>
         <%= f.text_field :keyword, placeholder: "キーワード検索" %>
@@ -14,14 +20,16 @@
     
     
     
-    
-    
-    
     <!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
     <% @crafts.each do |craft| %>
         <!--これで→-->
         <div class="card">
-            <p><%= craft.title %> <%= craft.caption %> <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a> <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a></p>
+            <a href="/crafts/<%= craft.id %>">
+                <p><%= image_tag craft.image_url %></p>
+                <p><%= craft.title %></p>
+                <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a>
+                <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a>
+            </a>
         </div>
         <!--←投稿1つ分-->
     <% end %>

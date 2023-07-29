@@ -1,0 +1,20 @@
+[33m7d9f61b[m[33m ([m[1;36mHEAD -> [m[1;32mfeature_img_9[m[33m)[m 画像投稿機能完成 showページ作成
+[33m1b97cf5[m .gitignore update
+[33maa9e997[m MiniMagick導入 画像投稿設定変更
+[33m7e21a40[m 画像が反映されないバグの確認
+[33m3b0d8da[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m 反映されないpullを修正
+[33m6c529d5[m Merge pull request #61 from yuina-honda/hotfix_59
+[33mcad3d36[m Merge branch 'master' into hotfix_59
+[33m1fd2f3b[m[33m ([m[1;31morigin/hotfix_59[m[33m, [m[1;32mhotfix_59[m[33m)[m push用コントローラ修正
+[33m824b0af[m Merge pull request #60 from yuina-honda/hotfix_59
+[33mf0c481c[m Merge branch 'master' into hotfix_59
+[33m5849dc6[m 修正完了
+[33m9016efa[m editフォーム修正完了
+[33ma531a78[m routes,form,controller修正中
+[33mfb1e0bd[m Merge pull request #56 from yuina-honda/feature_img_8
+[33mb1ba82d[m[33m ([m[1;31morigin/feature_img_8[m[33m)[m craft_params作成 画像投稿フォーム修正
+[33m0563b44[m Merge pull request #55 from yuina-honda/feature_img_9
+[33m802a2b1[m 画像投稿フォームのみ作成
+[33mbde8a97[m Merge pull request #52 from yuina-honda/feature_39_scss
+[33m1b1548a[m edit/newのcss適用完了
+[33m0111f97[m Merge pull request #50 from yuina-honda/feature_39_scss
