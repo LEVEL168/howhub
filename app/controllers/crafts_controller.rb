@@ -1,5 +1,5 @@
 class CraftsController < ApplicationController
-      def top
+    def top
        #導入ページが呼ばれたときに動作するアクション
     end
     
