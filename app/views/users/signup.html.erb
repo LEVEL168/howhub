@@ -10,9 +10,16 @@
     
     <h3 class="signup-h3">新規アカウント作成</h3>
     
-    
+    <% if user.errors.any? %>
+      <div class = "alert">
+        <ul>
+          <% user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <%= form_with(model: @craft, local: true) do |form| %>
-        <%= render "partial/errors_messages", model: form.object %>
         <div class="form-content">
             <div class="name">
                 <span class="f-label"><%= form.label :name, "ユーザーネーム" %><span class="necessary">*</span></span>
@@ -43,7 +50,6 @@
                 <%= link_to "利用規約", "#", target: :_blank, rel: "noopener noreferrer", class: "rules" %>を確認し、同意しました<span class="necessary">*</span>
                 
             </div>
-            <!--バリデーションにチェックボックスのチェック済のコード書くのか？-->
         </div>
         
         <div class="signup-btn">
