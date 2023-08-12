@@ -72,6 +72,7 @@ class CraftsController < ApplicationController
       def show
        @craft = Craft.all
        @craft = Craft.find(params[:id]) 
+      end
     end
     
     
