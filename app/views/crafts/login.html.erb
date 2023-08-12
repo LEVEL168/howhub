@@ -1,0 +1,38 @@
+<header>
+    <%= render "partial/logout-nav" %>
+</header>
+
+<main class="signup-main">
+    <img class="logo" src="/assets/logo.png" alt="HouHubロゴ画像">
+
+    <p class="signup-p">ノウハウを共有して<br>
+        楽しく腕を磨こう！</p>
+
+    <h3 class="login-h3">HouHubにログイン</h3>
+
+
+    <%= form_with(model: @craft, local: true) do |form| %>
+        <div class="form-content">
+            <div class="mail">
+                <span class="f-label"><%= form.label :mail, "メールアドレス" %><span class="necessary">*</span></span>
+                <%= form.text_field :mail, class: "form-text"%>
+                <%= form.hidden_field :mail_cache %>
+            </div>
+
+            <div class="password s-form">
+                <span class="f-label"><%= form.label :password, "パスワード" %><span class="necessary">*</span></span>
+                <%= form.text_field :password, class: "form-text" %>
+                <%= form.hidden_field :password_cache %>
+            </div>
+
+            <div class="signup-btn">
+                <%= form.submit "ログイン", class: "signup-submit" %>
+            </div>
+        </div>
+    <% end %>
+
+</main>
+
+<div class="footer-sp">
+    <small>&copy 2023 Iroha All Rights Reserved.</small>
+</div>
