@@ -11,11 +11,9 @@
 <main>
     <h3>投稿一覧（ログイン時トップページ）</h3>
     
-    <a href="/crafts/new">投稿を作成</a>
-    
     <%= form_with url: search_path, method: :get, local: true do |f| %>
-        <%= f.text_field :keyword, placeholder: "キーワード検索" %>
-        <%= f.submit "検索" %>
+        <%= f.text_field :keyword, placeholder: "キーワード検索",class: "search_form", style: "width:80%" %>
+        <%= f.submit "検索", class: "search_submit" %>
     <% end %>
     
     
