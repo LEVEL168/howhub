@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def signup
-        
+        @user = User.new
     end
     
     def new
@@ -16,6 +16,10 @@ class UsersController < ApplicationController
             flash.now[:alert] = "*がついている項目を全て入力してください"
             render "signup"
         end
+    end
+    
+    def login
+        render "/crafts/login"
     end
     
     def user_params

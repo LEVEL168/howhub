@@ -10,39 +10,36 @@
     
     <h3 class="signup-h3">新規アカウント作成</h3>
     
-    <% if user.errors.any? %>
-      <div class = "alert">
+    <% if @user.errors.any? %>
+      <div class = "danger">
         <ul>
-          <% user.errors.full_messages.each do |message| %>
+          <% @user.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
         </ul>
       </div>
     <% end %>
+    
     <%= form_with(model: @craft, local: true) do |form| %>
         <div class="form-content">
             <div class="name">
                 <span class="f-label"><%= form.label :name, "ユーザーネーム" %><span class="necessary">*</span></span>
                 <%= form.text_field :name, class: "form-text" %>
-                <%= form.hidden_field :name_cache %>
             </div>
             
             <div class="mail">
                 <span class="f-label"><%= form.label :mail, "メールアドレス" %><span class="necessary">*</span></span>
                 <%= form.text_field :mail, class: "form-text"%>
-                <%= form.hidden_field :mail_cache %>
             </div>
             
             <div class="password">
                 <span class="f-label"><%= form.label :password, "パスワード" %><span class="necessary">*</span></span>
                 <%= form.text_field :password, class: "form-text", placeholder:"半角6~12文字 / 英大文字・小文字・数字それぞれ１文字以上含んでください" %>
-                <%= form.hidden_field :password_cache %>
             </div>
             
             <div class="password">
                 <span class="f-label"><%= form.label :password, "パスワード(確認用)" %><span class="necessary">*</span></span>
-                <%= form.text_field :password, class: "form-text s-form", placeholder:"確認のためもう一度入力" %>
-                <%= form.hidden_field :password_cache %>
+                <%= form.text_field :password_confirmation, class: "form-text s-form", placeholder:"確認のためもう一度入力" %>
             </div>
             
             <div class=”field”>

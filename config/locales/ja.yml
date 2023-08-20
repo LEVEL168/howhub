@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: ユーザーネーム
+        mail: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        agree: 利用規約
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              too_short: "を入力してください"
+            agree:
+              accepted: "に同意してください"

@@ -287,7 +287,7 @@ header{
 }
 
 
-// -------------------アラート---------------------------------------
+// -------------------アラート群---------------------------------------
 .alert{
     background-color: #ccffcc;
     margin-top: 60px;
@@ -300,6 +300,16 @@ header{
     margin-bottom: 20px;
     font-size: 20px;
     color: red;
+}
+
+.danger li{
+    list-style: none;
+}
+
+.danger{
+    font-size: 16px;
+    color: red;
+    font-weight: normal;
 }
 
 
