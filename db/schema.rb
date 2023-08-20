@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_02_135157) do
+ActiveRecord::Schema.define(version: 2023_08_04_140432) do
 
   create_table "crafts", force: :cascade do |t|
     t.string "title"
@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(version: 2023_07_02_135157) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "mail"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["mail"], name: "index_users_on_mail", unique: true
   end
 
 end
