@@ -13,13 +13,13 @@ class UsersController < ApplicationController
             flash[:notice] = "#{@user.name}さん、HouHubへようこそ！" 
             redirect_to root_path
         else
-            flash.now[:alert] = "*がついている項目を全て入力してください"
+            # flash.now[:warning] = "*がついている項目を全て入力してください"
             render "signup"
         end
     end
     
-    def login
-        render "/crafts/login"
+    def show
+       @user = User.find(params[:id])  
     end
     
     def user_params

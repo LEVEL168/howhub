@@ -7,8 +7,7 @@
             <i class="fa fa-bars fa-2x fa-fw" id="open"></i>
               
             <div class="pc-menu">
-                <span class="nav-link"><a href="#" class="login">ログアウト</a></span>
-                <span class="nav-link"><a href="#">マイページ</a></span>
+                <span class="nav-link"><%= link_to "マイページ", "/users/#{current_user.id}" %></span>
                 <a href="/crafts/new" class="register">新規投稿作成</a>
             </div>
     </div>
@@ -19,8 +18,7 @@
         <nav>
             <ul>
                 <li><a href="/crafts/new">新規投稿作成</a></li>
-                <li><a href="#">マイページ</a></li7>
-                <li><a href="#">ログアウト</a></li>
+                <li><%= link_to "マイページ", "/users/#{current_user.id}" %></li>
             </ul>
         </nav>
     </div>
