@@ -23,9 +23,8 @@
         <!--これで→-->
         <div class="card">
             <a href="/crafts/<%= craft.id %>">
-                <p><%= image_tag craft.image_url %></p>
                 <p><%= craft.title %></p>
-                <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a>
+                <%= link_to "投稿を編集", edit_user_craft_path(@user, craft.id) %>
                 <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a>
             </a>
         </div>

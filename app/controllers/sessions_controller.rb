@@ -18,6 +18,6 @@ class SessionsController < ApplicationController
   
   def destroy
     log_out
-    redirect_to login_path
+    redirect_to login_path, notice: "ログアウトしました"
   end
 end
