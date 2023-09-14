@@ -45,7 +45,7 @@ class CraftsController < ApplicationController
     end
     
     def edit
-        @user = User.find(params[:user_id])
+        @craft_user = User.find(params[:user_id])
         @craft = Craft.find(params[:id])
     end
     
@@ -69,7 +69,7 @@ class CraftsController < ApplicationController
     
     
     def craft_params
-        params.require(:craft).permit(:title, :caption, :image).merge(user_id: @user.id)
+        params.require(:craft).permit(:title, :caption, :image, :user_id)
     end
     
 end
