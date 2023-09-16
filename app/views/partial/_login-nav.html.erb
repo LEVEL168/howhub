@@ -7,9 +7,8 @@
             <i class="fa fa-bars fa-2x fa-fw" id="open"></i>
               
             <div class="pc-menu">
-                <span class="nav-link"><%= link_to "マイページ", "" %></span>
-                <%= link_to "新規投稿作成", new_user_craft_path(user.id), class: "register" %>
-                <!--<a href="/users/user_id/crafts/new" class="register">新規投稿作成</a>-->
+                <span class="nav-link"><%= link_to "マイページ", user_path(current_user.id) %></span>
+                <%= link_to "新規投稿作成", new_user_craft_path(current_user.id), class: "register" %>
             </div>
     </div>
           

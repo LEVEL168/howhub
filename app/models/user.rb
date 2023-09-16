@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :userd, dependent: :destroy
+    # has_many :userd, dependent: :destroy
     
     validates :name, length: { in: 1..50 }
     

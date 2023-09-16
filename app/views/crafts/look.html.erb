@@ -22,11 +22,9 @@
     <% @crafts.each do |craft| %>
         <!--これで→-->
         <div class="card">
-            <a href="/crafts/<%= craft.id %>">
-                <p><%= craft.title %></p>
-                <%= link_to "投稿を編集", edit_user_craft_path(craft.user_id, craft.id) %>
-                <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a>
-            </a>
+            <%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %>
+            <%= link_to "投稿を編集", edit_user_craft_path(current_user, craft.id) %>
+            <%= link_to "投稿を削除", user_craft_path(current_user, craft.id), method: :delete %>
         </div>
         <!--←投稿1つ分-->
     <% end %>

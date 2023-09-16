@@ -5,7 +5,7 @@
 <main>
     <h3>投稿の編集</h3>
     
-    <%= form_with(model: @craft, local: true) do |form| %>
+    <%= form_with(model: [current_user, @craft], local: true) do |form| %>
     <%= render "partial/errors_messages", model: form.object %>
         <div class="title">
             <%= form.label :title, "タイトル" %>

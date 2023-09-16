@@ -5,7 +5,7 @@
 <main>
     <h3>新規投稿作成</h3>
     
-    <%= form_with(model: @craft, local: true) do |form| %>
+    <%= form_with(model: [current_user, @craft], local: true) do |form| %>
         <%= render "partial/errors_messages", model: form.object %>
         <div class="image">
             <%= form.label :image, "画像を追加" %>
