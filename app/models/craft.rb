@@ -1,5 +1,5 @@
 class Craft < ApplicationRecord
-    # belongs_to :user
+    belongs_to :user
     # has_many :thanks, dependent: :destroy
     # # has_many :users, through: :tkanks
 

@@ -6,7 +6,8 @@
     <h3>投稿の編集</h3>
     
     <%= form_with(model: [current_user, @craft], local: true) do |form| %>
-    <%= render "partial/errors_messages", model: form.object %>
+        <%= form.hidden_field :user_id, value: current_user.id %>
+        <%= render "partial/errors_messages", model: form.object %>
         <div class="title">
             <%= form.label :title, "タイトル" %>
             <%= form.text_field :title, class: "form-text", value:@craft.title, style: "width:100%" %>

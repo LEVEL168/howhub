@@ -28,7 +28,7 @@ class CraftsController < ApplicationController
     def create
         #新しい投稿がフォームからPostされたときに動作するアクション
         @craft = Craft.new(craft_params)
-        if @craft.save
+        if @craft.save!
             flash[:notice] = "投稿しました！" 
             redirect_to root_path
         else
