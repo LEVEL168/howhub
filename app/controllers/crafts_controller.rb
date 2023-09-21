@@ -1,4 +1,6 @@
 class CraftsController < ApplicationController
+    before_action :require_login, except: [:top]
+    
     def top
        #導入ページが呼ばれたときに動作するアクション
     end

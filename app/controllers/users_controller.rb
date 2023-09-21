@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+    before_action :require_login, only: [:show]
+    
     def signup
         @user = User.new
     end
@@ -11,15 +13,19 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             flash[:notice] = "#{@user.name}さん、HouHubへようこそ！" 
-            redirect_to root_path
+            redirect_to controller: :crafts, action: :look
         else
-            # flash.now[:warning] = "*がついている項目を全て入力してください"
             render "signup"
         end
     end
     
     def show
        @user = User.find(params[:id])  
+    end
+    
+    def destroy
+        log_out
+        redirect_to controller: :crafts, action: :top
     end
     
     def user_params
