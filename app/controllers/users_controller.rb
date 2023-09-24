@@ -13,6 +13,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             flash[:notice] = "#{@user.name}さん、HouHubへようこそ！" 
+            log_in(@user)
             redirect_to controller: :crafts, action: :look
         else
             render "signup"
@@ -29,7 +30,6 @@ class UsersController < ApplicationController
     end
     
     def user_params
-        # モデルに保存されるパラメータを許可されたもの以外は処理しないようにする設定
         params.permit(:name, :mail, :password, :password_confirmation, :agree)
     end
     
