@@ -1,0 +1,13 @@
+<header>
+    <%= render "partial/login-nav" %>
+</header>
+
+<main>
+    <h3>マイページ</h3>
+    
+    <p class="mypage"><%= current_user.name %></p>
+    
+    
+    <p><%= link_to 'ログアウト', logout_path, method: :delete %></p>
+    
+</main>

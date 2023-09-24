@@ -1,10 +1,13 @@
 class CraftsController < ApplicationController
+    before_action :require_login, except: [:top]
+    
     def top
        #導入ページが呼ばれたときに動作するアクション
     end
     
     def look
         #投稿一覧ページ（ログイン時トップページ）が呼ばれたときに動作するアクション
+        @users = User.all
         @crafts = Craft.all
         
     end
@@ -20,6 +23,7 @@ class CraftsController < ApplicationController
     
     def new
         #投稿作成ページが呼ばれたときに動作するアクション
+        @user = User.find(params[:user_id])
         @craft = Craft.new
     end
     
@@ -43,10 +47,12 @@ class CraftsController < ApplicationController
     end
     
     def edit
+        @craft_user = User.find(params[:user_id])
         @craft = Craft.find(params[:id])
     end
     
     def update
+        @user = User.find(params[:user_id])
         @craft = Craft.find(params[:id])
         if @craft.update(craft_params)
             flash[:notice] = "投稿を更新しました"
@@ -65,7 +71,7 @@ class CraftsController < ApplicationController
     
     
     def craft_params
-        params.require(:craft).permit(:title, :caption, :image)
+        params.require(:craft).permit(:title, :caption, :image, :user_id)
     end
     
 end

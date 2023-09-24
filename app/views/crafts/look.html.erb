@@ -22,12 +22,11 @@
     <% @crafts.each do |craft| %>
         <!--これで→-->
         <div class="card">
-            <a href="/crafts/<%= craft.id %>">
-                <p><%= image_tag craft.image_url %></p>
-                <p><%= craft.title %></p>
-                <a href="/crafts/<%= craft.id %>/edit">投稿を編集</a>
-                <a href="/crafts/<%= craft.id %>" data-method="delete">投稿を削除</a>
-            </a>
+            <% if current_user %>
+                <%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %>
+                <%= link_to "投稿を編集", edit_user_craft_path(current_user, craft.id) %>
+                <%= link_to "投稿を削除", user_craft_path(current_user, craft.id), method: :delete, data: { confirm: '本当に登録解除しますか？' } %>
+            <% end %>
         </div>
         <!--←投稿1つ分-->
     <% end %>

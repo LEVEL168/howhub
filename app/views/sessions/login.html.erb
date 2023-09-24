@@ -10,6 +10,11 @@
 
     <h3 class="login-h3">HouHubにログイン</h3>
 
+    <% flash.each do |message_type, message| %>
+        <div class="warning">
+          <%= message %>
+        </div>
+    <% end %>
 
     <%= form_with(model: @craft, local: true) do |form| %>
         <div class="form-content">

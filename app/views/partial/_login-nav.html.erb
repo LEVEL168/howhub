@@ -7,9 +7,14 @@
             <i class="fa fa-bars fa-2x fa-fw" id="open"></i>
               
             <div class="pc-menu">
-                <span class="nav-link"><a href="#" class="login">ログアウト</a></span>
-                <span class="nav-link"><a href="#">マイページ</a></span>
-                <a href="/crafts/new" class="register">新規投稿作成</a>
+                <span class="nav-link">
+                    <% if current_user %>
+                        <%= link_to "マイページ", user_path(current_user.id) %>
+                    <% end %>
+                </span>
+                <% if current_user %>
+                    <%= link_to "新規投稿作成", new_user_craft_path(current_user.id), class: "register" %>
+                <% end %>
             </div>
     </div>
           
@@ -18,9 +23,16 @@
         <i class="fa fa-times fa-2x fa-fw close"></i>
         <nav>
             <ul>
-                <li><a href="/crafts/new">新規投稿作成</a></li>
-                <li><a href="#">マイページ</a></li7>
-                <li><a href="#">ログアウト</a></li>
+                <li>
+                    <% if current_user %>
+                        <%= link_to "新規投稿作成", new_user_craft_path(current_user.id) %>
+                    <% end %>
+                </li>
+                <li>
+                    <% if current_user %>
+                        <%= link_to "マイページ", user_path(current_user.id) %>
+                    <% end %>
+                </li>
             </ul>
         </nav>
     </div>
