@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_19_143846) do
+ActiveRecord::Schema.define(version: 2023_09_28_173530) do
 
   create_table "crafts", force: :cascade do |t|
     t.string "title"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2023_09_19_143846) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_image", default: "NoImage.jpg"
     t.index ["mail"], name: "index_users_on_mail", unique: true
   end
 

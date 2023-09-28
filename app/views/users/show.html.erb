@@ -5,6 +5,7 @@
 <main>
     <h3>マイページ</h3>
     
+    <%= image_tag current_user.user_image.url, alt: "user-icon", class: "user-icon" %>
     <p class="mypage"><%= current_user.name %></p>
     
     

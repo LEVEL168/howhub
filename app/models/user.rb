@@ -1,6 +1,8 @@
 class User < ApplicationRecord
     has_many :userd, dependent: :destroy
     
+    mount_uploader :user_image, ImageUploader
+    
     validates :name, length: { in: 1..50 }
     
     validates :mail, {uniqueness: true}
