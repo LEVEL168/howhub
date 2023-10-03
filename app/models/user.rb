@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_many :userd, dependent: :destroy
     
-    mount_uploader :user_image, ImageUploader
+    mount_uploader :avatar, AvatarUploader
     
     validates :name, length: { in: 1..50 }
     

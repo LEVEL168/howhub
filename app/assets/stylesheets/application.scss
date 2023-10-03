@@ -498,3 +498,14 @@ header{
     margin-bottom: 15px;
 }
 
+
+// -------------------profile PC版---------------------------------------
+@media (min-width: 670px){
+    .profile-main{
+        text-align: center;
+    }
+    
+    .user_icon{
+        margin-top: 30px;
+    }
+}
