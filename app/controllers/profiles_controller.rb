@@ -8,11 +8,12 @@ class ProfilesController < ApplicationController
     end
     
     def update
-       if @user.update(user_params) 
-        #   このメッセージこのやり方じゃないとだめか？
-           redirect_to profile_path, success: t("defaults.message.updated", item: User.model_name.human)
+       @user = User.find(current_user.id) 
+       if @user.update(user_params)
+           flash[:notice] = "プロフィールを更新しました"
+           redirect_to profile_path
        else
-           flah.now[:notice] = t("defaults.message.not_updated", item: User.model_name.human)
+           flash.now[:notice] = "※がついている項目を入力してください"
            render :edit
        end
     end
@@ -25,6 +26,6 @@ class ProfilesController < ApplicationController
     end
     
     def user_params
-       params.require(:user).permit(:name, :mail, :avatar, :avatar_cache) 
+       params.require(:user).permit(:name, :mail, :avatar, :avatar_cache, :profile_text) 
     end
 end

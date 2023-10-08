@@ -4,5 +4,33 @@
 
 <main>
     <h3>プロフィール編集</h3>
-
+    
+    <%= form_with model: current_user, url: profile_path, local: true do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= render "partial/errors_messages", model: f.object %>
+        <div class="p-name">
+            <%= f.label :name, "ユーザーネーム" %><span class="necessary">*</span>
+            <%= f.text_field :name, class: "form-text" %>
+        </div>
+        
+        <div class="p-mail">
+            <%= f.label :mail, "メールアドレス" %><span class="necessary">*</span>
+            <%= f.email_field :mail, class: "form-text" %>
+        </div>
+        
+        <div class="p-text">
+            <%= f.label :profile_text, "自己紹介" %><span class="necessary">*</span>
+            <%= f.text_area :profile_text, class: "form-text", style: "width:100%", rows: "15" %>
+        </div>
+        
+        <div class="p-image">
+            <%= f.label :avatar, "アイコン画像" %>
+            <%= f.file_field :avatar, class: "form-control", accept: 'image/*' %>
+            <%= f.hidden_field :avatar_cache %>
+        </div>
+        <p class="attention">※jpg/jpeg/png 500KBまで<br></p>
+            
+        <%= f.submit  class: "submit" %>
+    <% end %>
+      
 </main>

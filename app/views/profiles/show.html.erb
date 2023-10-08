@@ -6,7 +6,7 @@
     <%= image_tag current_user.avatar.url, alt: "user-icon", class: "user_icon", size: "100x100" %>
     
     <p class="profile-name"><%= current_user.name %></p>
-    <p class="profile-mail"><%= current_user.mail %></p>
+    <p class="profile-text"><%= current_user.profile_text %></p>
     <p><%= link_to "プロフィールを編集", edit_profile_path, class: "profile-edit" %></p>
     
     <p><%= link_to 'ログアウト', logout_path, method: :delete %></p>
