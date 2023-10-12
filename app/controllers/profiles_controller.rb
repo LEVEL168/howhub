@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+    before_action :require_login, only: %i[edit update]
+    
     def show
         
     end
@@ -8,8 +10,8 @@ class ProfilesController < ApplicationController
     end
     
     def update
-       @user = User.find(current_user.id) 
-       if @user.update(user_params)
+       @user = User.find(current_user.id)
+       if @user.update!(profile_params)
            flash[:notice] = "プロフィールを更新しました"
            redirect_to profile_path
        else
@@ -25,7 +27,7 @@ class ProfilesController < ApplicationController
        @user = User.find(current_user.id) 
     end
     
-    def user_params
-       params.require(:user).permit(:name, :mail, :avatar, :avatar_cache, :profile_text) 
+    def profile_params
+       params.require(:user).permit(:name, :maill, :avatar, :avatar_cache, :profile_text) 
     end
 end
