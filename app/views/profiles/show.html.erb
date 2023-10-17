@@ -3,6 +3,7 @@
 </header>
 
 <main class="profile-main">
+    <%= render "partial/errors_messages" %>
     <%= image_tag current_user.avatar.url, alt: "user-icon", class: "user_icon", size: "100x100" %>
     
     <p class="profile-name"><%= current_user.name %></p>

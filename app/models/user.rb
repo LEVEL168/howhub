@@ -16,7 +16,7 @@ class User < ApplicationRecord
     VALID_PASSWORD_REGEX =/\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{6,12}+\z/
     validates :password, presence: true,
             format: { with: VALID_PASSWORD_REGEX, message: "は半角6~12文字/英大文字・小文字・数字をそれぞれ１文字以上含めてください"},
-                confirmation: { type: :password }
+                confirmation: { type: :password },on: :update,allow_blank: true
     has_secure_password
     validates :agree, acceptance: true, on: :create
     

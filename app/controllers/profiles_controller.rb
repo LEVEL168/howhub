@@ -11,11 +11,11 @@ class ProfilesController < ApplicationController
     
     def update
        @user = User.find(current_user.id)
-       if @user.update!(profile_params)
+       if @user.update(profile_params)
            flash[:notice] = "プロフィールを更新しました"
            redirect_to profile_path
        else
-           flash.now[:notice] = "※がついている項目を入力してください"
+           flash.now[:alert] = "※がついている項目を入力してください"
            render :edit
        end
     end
@@ -28,6 +28,6 @@ class ProfilesController < ApplicationController
     end
     
     def profile_params
-       params.require(:user).permit(:name, :maill, :avatar, :avatar_cache, :profile_text) 
+       params.require(:user).permit(:name, :maill, :avatar, :avatar_cache, :profile_text).merge(id: current_user.id)
     end
 end
