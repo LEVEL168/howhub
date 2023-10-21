@@ -429,7 +429,7 @@ header{
         line-height: 23px;
     }
 
-  .signup-h3{
+  .border-h3{
         display: inline-block;
         border-bottom: 6px solid #66cdaa;
     }
@@ -508,4 +508,59 @@ header{
     .user_icon{
         margin-top: 30px;
     }
+    
+    p{
+        font-weight: 600;
+    }
+    
+    .p-name{
+        margin-top: -10px;
+    }
+    
+    .pc-menu{
+        display: block;
+    }
+    
+    #open{
+        display: none;
+    }
+    
+    main{
+        margin: auto;
+        max-width: 1200px;
+    }
+    
+    .form-content{
+        margin: 20px 0 30px 0;
+    }
+    
+    .p-image{
+        margin-bottom: 5px;
+    }
+    
+    .p-attention{
+        margin: -1px 0 20px 0;
+    }
+    
+    .submit{
+        width: 200px;
+        height: 65px;
+        background-color: #66cdaa;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    .submit-btn{
+        text-align: center;
+    }
+    
+}
+
+
+// -------------------profile スマホ版---------------------------------------
+.p-attention{
+    margin-bottom: 20px;
 }
