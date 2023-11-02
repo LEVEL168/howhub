@@ -55,3 +55,5 @@ gem 'jquery-rails'
 gem "mini_magick"
 
 gem 'rails-i18n'
+
+gem 'kaminari'

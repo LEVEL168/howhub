@@ -10,5 +10,14 @@
     <p class="profile-text"><%= current_user.profile_text %></p>
     <p><%= link_to "プロフィールを編集", edit_profile_path, class: "profile-edit" %></p>
     
+    <div>
+        <% @crafts.each do |craft| %>
+            <p><%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %></p>
+            <p><%= link_to craft.title, user_craft_path(current_user, craft.id) %></p>
+        <% end %>
+    </div>
+    
+    <%= paginate @crafts %>
+    
     <p><%= link_to 'ログアウト', logout_path, method: :delete %></p>
 </main>
