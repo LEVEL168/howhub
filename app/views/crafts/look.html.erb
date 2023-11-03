@@ -16,6 +16,7 @@
         <%= f.submit "検索", class: "search_submit" %>
     <% end %>
     
+    <%= link_to "退会する", delete_path(current_user.id) %>
     
     
     <!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
