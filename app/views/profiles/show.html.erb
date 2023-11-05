@@ -4,17 +4,26 @@
 
 <main class="profile-main">
     <%= render "partial/errors_messages" %>
-    <%= image_tag current_user.avatar.url, alt: "user-icon", class: "user_icon", size: "100x100" %>
     
-    <p class="profile-name"><%= current_user.name %></p>
-    <p class="profile-text"><%= current_user.profile_text %></p>
-    <p><%= link_to "プロフィールを編集", edit_profile_path, class: "profile-edit" %></p>
+    <div class="profile">
+        <%= image_tag current_user.avatar.url, alt: "user-icon", class: "user_icon", size: "100x100" %>
+        <p class="profile-name"><%= current_user.name %></p>
+        <p class="profile-text"><%= safe_join(current_user.profile_text.split("\n"),tag(:br)) %></p>
+        <p class="profile-link"><%= link_to "プロフィールを編集", edit_profile_path, class: "profile-edit" %></p>
+    </div>
     
-    <div>
-        <% @crafts.each do |craft| %>
-            <p><%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %></p>
-            <p><%= link_to craft.title, user_craft_path(current_user, craft.id) %></p>
-        <% end %>
+    <section class="p-space"></section>
+    
+    <div class="card-list">
+        <p class="card-p">投稿一覧</p>
+        <ul class="my-card">
+            <% @crafts.each do |craft| %>
+                <div class="one-card">
+                    <li class="card-img"><%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %></li>
+                    <li class="card-title"><%= link_to craft.title, user_craft_path(current_user, craft.id) %></li>
+                </div>
+            <% end %>
+        </ul>
     </div>
     
     <%= paginate @crafts %>

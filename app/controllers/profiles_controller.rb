@@ -2,12 +2,7 @@ class ProfilesController < ApplicationController
     before_action :require_login
     
     def show
-        # crafts = Craft.includes(:user)
-        # crafts = Craft.find(current_user.id)
-        @user = User.find(current_user.id)
-        # @crafts = Craft.find(current_user.id)
-        @crafts = Craft.page(params[:page]).per(10)
-        # @crafts = @user.crafts.page(params[:page]).per(10).order('updated_at DESC')
+        @crafts = Craft.where(user_id: current_user.id).page(params[:page]).per(15)
     end
     
     def edit
