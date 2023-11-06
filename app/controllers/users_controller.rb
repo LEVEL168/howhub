@@ -20,12 +20,12 @@ class UsersController < ApplicationController
         end
     end
     
-    def show
-        @user = User.find(params[:id])  
+    def edit
+        @user = User.find(params[:id])
     end
     
-    def delete
-        
+    def show
+       @user = User.find(params[:id])
     end
     
     def destroy
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     end
     
     def user_params
-        params.permit(:name, :mail, :password, :password_confirmation, :agree)
+        params.permit(:name, :mail, :password, :password_confirmation, :agree, :user_image)
     end
     
 end

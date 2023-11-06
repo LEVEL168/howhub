@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :crafts
       
   end
+  resource :profile, only: %i[show edit update]
   get "/top", to:"crafts#top"
   get "/search", to:"crafts#search"
   get "/signup", to:"users#signup"
