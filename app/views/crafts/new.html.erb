@@ -3,7 +3,7 @@
 </header>
 
 <main>
-    <h3>新規投稿作成</h3>
+    <h3 class="border-h3">新規投稿作成</h3>
     
     <%= form_with(model: [current_user, @craft], local: true) do |form| %>
         <%= form.hidden_field :user_id, value: current_user.id %>

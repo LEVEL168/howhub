@@ -429,7 +429,7 @@ header{
         line-height: 23px;
     }
 
-  .signup-h3{
+  .border-h3{
         display: inline-block;
         border-bottom: 6px solid #66cdaa;
     }
@@ -498,3 +498,226 @@ header{
     margin-bottom: 15px;
 }
 
+
+// -------------------profile PC版---------------------------------------
+@media (min-width: 670px){
+    .profile-main{
+        text-align: center;
+    }
+    
+    .user_icon{
+        margin-top: 30px;
+    }
+    
+    p{
+        font-weight: 600;
+    }
+    
+    .p-name{
+        margin-top: -10px;
+    }
+    
+    .pc-menu{
+        display: block;
+    }
+    
+    #open{
+        display: none;
+    }
+    
+    main{
+        margin: auto;
+        max-width: 1200px;
+    }
+    
+    .form-content{
+        margin: 20px 0 30px 0;
+    }
+    
+    .p-image{
+        margin-bottom: 5px;
+    }
+    
+    .p-attention{
+        margin: -1px 0 20px 0;
+    }
+    
+    .submit{
+        width: 200px;
+        height: 65px;
+        background-color: #66cdaa;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    .submit-btn{
+        text-align: center;
+    }
+    
+    
+    
+    
+    .profile-name{
+        font-size: 23px;
+    }
+    
+    .profile-text{
+        font-size: 15px;
+        font-weight: normal;
+        width: calc(100% - 250px);
+        margin: 15px auto;
+    }
+    
+    .profile-edit{
+        color: #5D5D5C;
+        font-size: 14px;
+        background-color: #F7F6F6;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    
+    .profile-edit:hover{
+        background-color: #E1DFDF;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    
+    .profile-link{
+        margin: 30px 0;
+    }
+    
+    .p-space{
+        margin: 0px auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .card-p{
+        display: flex;
+        margin-left: 45px;
+        font-size: 23px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+    
+    .my-card{
+        display: flex;
+        padding: 0px;
+        flex-wrap: wrap;
+        margin: -12px;
+        list-style: none;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    }
+    
+    .one-card{
+        display: list-item;
+        margin: 12px;
+    }
+    
+    .card-title{
+        display: inline;
+        max-width: 100%;
+        overflow: hidden;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 22px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+}
+
+
+// -------------------profile スマホ版---------------------------------------
+.p-attention{
+    margin-bottom: 20px;
+}
+
+.profile-main{
+    text-align: center;
+}
+
+.user_icon{
+    margin-top: 30px;
+}
+
+.profile-name{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.profile-text{
+    font-size: 15px;
+    font-weight: normal;
+    width: calc(100% - 150px);
+    margin: 15px auto;
+}
+
+.profile-edit{
+    color: #5D5D5C;
+    font-size: 14px;
+    background-color: #F7F6F6;
+    padding: 10px 80px;
+    border-radius: 10px;
+}
+
+.profile-edit:hover{
+    background-color: #E1DFDF;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.profile-link{
+    margin: 30px 0;
+    width: 100%;
+}
+
+.p-space{
+    margin: 0px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.card-p{
+    display: flex;
+    margin-left: 45px;
+    font-size: 23px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.my-card{
+    display: flex;
+    padding: 0px;
+    flex-wrap: wrap;
+    margin: -12px;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.one-card{
+    display: list-item;
+    margin: 12px;
+}
+
+.card-title{
+    display: inline;
+    max-width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: bold;
+}

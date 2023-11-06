@@ -9,7 +9,7 @@
 <% end %>
 
 <main>
-    <h3>投稿一覧（ログイン時トップページ）</h3>
+    <h3 class="border-h3">投稿一覧（ログイン時トップページ）</h3>
     
     <%= form_with url: search_path, method: :get, local: true do |f| %>
         <%= f.text_field :keyword, placeholder: "キーワード検索",class: "search_form", style: "width:80%" %>
@@ -24,6 +24,7 @@
         <div class="card">
             <% if current_user %>
                 <%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %>
+                <%= link_to craft.title, user_craft_path(current_user, craft.id) %>
                 <%= link_to "投稿を編集", edit_user_craft_path(current_user, craft.id) %>
                 <%= link_to "投稿を削除", user_craft_path(current_user, craft.id), method: :delete, data: { confirm: '本当に登録解除しますか？' } %>
             <% end %>

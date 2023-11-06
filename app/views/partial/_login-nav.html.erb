@@ -9,7 +9,7 @@
             <div class="pc-menu">
                 <span class="nav-link">
                     <% if current_user %>
-                        <%= link_to "マイページ", user_path(current_user.id) %>
+                        <%= link_to "マイページ", profile_path %>
                     <% end %>
                 </span>
                 <% if current_user %>
@@ -30,7 +30,7 @@
                 </li>
                 <li>
                     <% if current_user %>
-                        <%= link_to "マイページ", user_path(current_user.id) %>
+                        <%= link_to "マイページ", profile_path %>
                     <% end %>
                 </li>
             </ul>

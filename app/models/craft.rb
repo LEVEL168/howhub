@@ -5,7 +5,7 @@ class Craft < ApplicationRecord
     validates :caption, length: { in: 1..2000 }
     mount_uploader :image, ImageUploader
     
-    def thank?(user)
-        crafts.where(user_id: user.id).exists?
-    end
+    # def thank?(user)
+    #     crafts.where(user_id: user.id).exists?
+    # end
 end
