@@ -1,5 +1,5 @@
 class Craft < ApplicationRecord
-    belongs_to :user
+    belongs_to :user, dependent: :delete_all
 
     validates :title, length: { in: 1..50 }
     validates :caption, length: { in: 1..2000 }

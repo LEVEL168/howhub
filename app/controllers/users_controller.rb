@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     end
     
     def destroy
-        @user = User.find(params[:id])
+        @user = User.find(params[:user_id])
         @user.destroy
         flash[:notie] = "退会しました"
         redirect_to root_path

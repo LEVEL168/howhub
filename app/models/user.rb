@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :userd, dependent: :destroy
+    has_many :users, dependent: :destroy
     
     mount_uploader :avatar, AvatarUploader
     
@@ -19,5 +19,7 @@ class User < ApplicationRecord
                 confirmation: { type: :password },on: :update,allow_blank: true
     has_secure_password
     validates :agree, acceptance: true, on: :create
+    
+    # validates :user, acceptance: true, on: :create
     
 end
