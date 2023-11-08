@@ -20,4 +20,6 @@ class User < ApplicationRecord
     has_secure_password
     validates :agree, acceptance: true, on: :create
     
+    # validates :user, acceptance: true, on: :create
+    
 end
