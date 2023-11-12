@@ -12,7 +12,10 @@
     <p class="delete-con">退会すると、アカウント情報や投稿内容も削除されます。</p>
         
     <div class=”field”>
-        <%= check_box :user, :user_id, {class: "disagree"}, true, false %>了承しました<span class="necessary">*</span>
+        <%= check_box_tag :delete %>
+        <%= label_tag :delete, "了承しました" %><span class="necessary">*</span>
+        
+        <!--<%= check_box :delete, :user_id, {class: "disagree"}, true, false %>了承しました<span class="necessary">*</span>-->
     </div>
     
     <%= link_to "退会する", user_path(current_user.id), class: "destroy-user", method: :delete, "data-confirm" => "本当に退会しますか？" %>
