@@ -29,8 +29,10 @@ class UsersController < ApplicationController
     end
     
     def destroy
-        log_out
-        redirect_to controller: :crafts, action: :top
+        @user = User.find(params[:id])
+        @user.destroy
+        flash[:notice] = "退会しました"
+        redirect_to root_path
     end
     
     def user_params

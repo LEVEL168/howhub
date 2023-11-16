@@ -8,7 +8,8 @@
     <div class="profile">
         <%= image_tag current_user.avatar.url, alt: "user-icon", class: "user_icon", size: "100x100" %>
         <p class="profile-name"><%= current_user.name %></p>
-        <p class="profile-text"><%= safe_join(current_user.profile_text.split("\n"),tag(:br)) %></p>
+        <p class="profile-text"><%= current_user.profile_text %></p>
+        <!--↑safe_join(current_user.profile_text.split("\n"),tag(:br))ではエラーになるので改行後で実装する-->
         <p class="profile-link"><%= link_to "プロフィールを編集", edit_profile_path, class: "profile-edit" %></p>
     </div>
     
@@ -29,4 +30,6 @@
     <%= paginate @crafts %>
     
     <p><%= link_to 'ログアウト', logout_path, method: :delete %></p>
+    <%= link_to "退会する", delete_path(current_user.id) %>
+    
 </main>

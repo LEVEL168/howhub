@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-    has_many :userd, dependent: :destroy
+    has_many :crafts, dependent: :destroy
     
     mount_uploader :avatar, AvatarUploader
     
     validates :name, length: { in: 1..50 }
-    validates :profile_text, length: { in: 1..1000 }
+    validates :profile_text, length: { in: 1..1000 },on: :edit,allow_blank: true
     
     validates :mail, {uniqueness: true}
     before_save { self.mail = mail.downcase }

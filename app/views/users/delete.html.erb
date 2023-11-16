@@ -1,0 +1,38 @@
+<header>
+    <%= render "partial/login-nav" %>
+</header>
+
+<main class="signup-main">
+    <img class="logo" src="/assets/logo.png" alt="HouHubロゴ画像">
+
+    <p class="signup-p">ノウハウを共有して<br>
+        楽しく腕を磨こう！</p>
+        
+    <div class="delete-que">本当にHouHubを退会しますか？</div>    
+    <p class="delete-con">退会すると、アカウント情報や投稿内容も削除されます。</p>
+    
+    
+    <label class="delete-check">
+        <input id="check" type="checkbox" onclick="checkValue(this)">
+        了承しました<span class="necessary">*</span>
+    </label>
+    
+    <div class="delete-btn">
+        <%= button_to "退会する", user_path(current_user.id), method: :delete, id: "btn", disabled: "disabled", "data-confirm" => "本当に退会しますか？" %>
+    </div>
+    
+    <script type="text/javascript">
+       function checkValue(check){
+           var btn = document.getElementById('btn');
+
+           if (check.checked) {
+               btn.value = '退会する';
+               btn.removeAttribute('disabled');
+           } else {
+               btn.value = '退会する';
+               btn.setAttribute('disabled', 'disabled');
+           }
+       }
+    </script>
+        
+</main>    
