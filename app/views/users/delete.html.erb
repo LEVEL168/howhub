@@ -21,7 +21,6 @@
         <%= button_to "退会する", user_path(current_user.id), method: :delete, id: "btn", disabled: "disabled", "data-confirm" => "本当に退会しますか？" %>
     </div>
     
-    <script src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
        function checkValue(check){
            var btn = document.getElementById('btn');
