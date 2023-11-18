@@ -1,4 +1,4 @@
-class AddProfileTextToUsers < ActiveRecord::Migration[5.2]
+class AddProfileTexitToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :profile_text, :text
   end

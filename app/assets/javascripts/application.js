@@ -32,3 +32,6 @@ $(function () {
     $('.overlay').toggleClass('is-active');
   });
 });
+
+
+$("#thank_btn_<%= @craft.id %>").html("<%= j(render 'thank/btn', craft: @craft) %>");
