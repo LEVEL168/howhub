@@ -1,0 +1,11 @@
+<% if craft.thankd_by?(current_user) %>
+    <%= link_to user_thanks_path(craft), method: :delete, remote: true do %>
+        <i class="fas fa-star" aria-hidden="true" style="color: #fcc800;"></i>
+        <%= craft.thanks.count %> ありがとう
+    <% end %>
+<% else %>
+    <%= link_to user_thanks_path(craft), method: :post, remote: true do %>
+        <i class="fas fa-star" aria-hidden="true"></i>
+        <%= craft.thanks.count %> ありがとう
+    <% end %>
+<% end %>
