@@ -548,13 +548,25 @@ header{
     padding-bottom: 15px;
 }
 
-.card-p{
-    display: flex;
-    margin-left: 45px;
-    font-size: 23px;
+.p-links{
+        text-align: start;
+    }
+    
+.my-crafts,.my-thanks{
+    text-align: none;
+    display: inline-block;
+    font-size: 20px;
     line-height: 20px;
-    font-weight: bold;
 }
+
+.my-crafts{
+    margin-left: 45px;
+}
+
+.my-thanks{
+    margin-left: 15px;
+}
+
 
 .my-card{
     display: flex;
@@ -682,12 +694,25 @@ header{
         padding-bottom: 30px;
     }
     
-    .card-p{
-        display: flex;
-        margin-left: 45px;
+    
+    .p-links{
+        text-align: start;
+    }
+    
+    .my-crafts,.my-thanks{
+        text-align: none;
+        display: inline-block;
         font-size: 23px;
         line-height: 20px;
         font-weight: bold;
+    }
+    
+    .my-crafts{
+        margin-left: 45px;
+    }
+    
+    .my-thanks{
+        margin-left: 15px;
     }
     
     .my-card{

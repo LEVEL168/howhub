@@ -15,25 +15,21 @@
     <section class="p-space"></section>
     
     <div class="p-links">
-        <p class="my-crafts">投稿一覧</p>
-        <p class="my-thanks"><%= link_to "ありがとう一覧", new_profile_path, class: "thanks-link"%></p>
+        <p class="my-crafts"><%= link_to "投稿一覧", profile_path, class: "thanks-link"%></p>
+        <p class="my-thanks">ありがとう一覧</p>
     </div>
     
-    <div class="card-list">    
+    <div class="card-list">
         <ul class="my-card">
-            <% @crafts.each do |craft| %>
+            <% @thanks.each do |thank|%>
                 <div class="one-card">
-                    <li class="card-img"><%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %></li>
-                    <li class="card-title"><%= link_to craft.title, user_craft_path(current_user, craft.id) %></li>
+                    <li class="card-img"><%= link_to (image_tag "#{thank.image}"),  user_craft_path(current_user,@thanks) %></li>
+                    <li class="card-title"><%= link_to thank.title,  user_craft_path(current_user,@thanks) %></li>
                 </div>
             <% end %>
         </ul>
     </div>
     
-    <%= paginate @crafts %>
-    
-    <p><%= link_to 'ログアウト', logout_path, method: :delete %></p>
-    <%= link_to "退会する", delete_path(current_user.id) %>
-    <!--※↑スマホ版はハンバーガーメニューに格納-->
+    <%= paginate @thanks %>
     
 </main>
