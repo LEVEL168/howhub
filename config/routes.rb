@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resource :thanks, only: [:create, :destroy]
     end
   end
-  resource :profile, only: %i[show edit update]
+  resource :profile, only: %i[new show edit update]
   get "/top", to:"crafts#top"
   get "/search", to:"crafts#search"
   get "/signup", to:"users#signup"
