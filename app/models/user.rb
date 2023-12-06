@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     has_many :crafts, dependent: :destroy
+    has_many :thanks, dependent: :destroy
     
     mount_uploader :avatar, AvatarUploader
     

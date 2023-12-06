@@ -1,13 +1,15 @@
 class ThanksController < ApplicationController
-    def create
-        @craft_thanks = Thank.new(user_id: current_user.id, craft_id: params[:craft_id])
-        @craft_thanks.save
-        redirect_to craft_path(params[:post_id])
-    end
+     before_action :require_login
     
     def create
-        @craft_thanks = Thank.find_by(user_id: current_user.id, create_id: params[craft_id])
-        @craft_thanks.destroy
-        redirect_to craft_path(params[:craft_id])
+       @craft = Craft.find(params[:craft_id])
+       thank = current_user.thanks.new(craft_id: @craft.id)
+       thank.save
+    end
+    
+    def destroy
+        @craft = Craft.find(params[:craft_id])
+        thank = current_user.thanks.find_by(craft_id: @craft.id)
+        thank.destroy
     end
 end

@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root to:"crafts#look"
   resources :users do
-    resources :crafts
-      
+    resources :crafts do
+      resource :thanks, only: [:create, :destroy]
+    end
   end
   resource :profile, only: %i[show edit update]
   get "/top", to:"crafts#top"
