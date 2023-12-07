@@ -16,18 +16,17 @@
         <%= f.submit "検索", class: "search_submit" %>
     <% end %>
     
-    
-    <!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
-    <% @crafts.each do |craft| %>
-        <!--これで→-->
-        <div class="card">
-            <% if current_user %>
-                <%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %>
-                <%= link_to craft.title, user_craft_path(current_user, craft.id) %>
-                <%= link_to "投稿を編集", edit_user_craft_path(current_user, craft.id) %>
-                <%= link_to "投稿を削除", user_craft_path(current_user, craft.id), method: :delete, data: { confirm: '本当に登録解除しますか？' } %>
+    <div class="card-list">
+        <ul class="card"> 
+            <% @crafts.each do |craft| %>
+                <div class="one-card">
+                    <% if current_user %>
+                        <li class="card-img"><%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %></li>
+                        <li class="card-title"><%= link_to craft.title.truncate(10), user_craft_path(current_user, craft.id) %></li>
+                        <li class="card-name"><%= link_to craft.user.name.truncate(10), user_craft_path(current_user, craft.id) %></li>
+                    <% end %>
+                </div>
             <% end %>
-        </div>
-        <!--←投稿1つ分-->
-    <% end %>
+        </ul>
+    </div>
 </main>
