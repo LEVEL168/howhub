@@ -9,7 +9,7 @@
 <% end %>
 
 <main>
-    <h3 class="border-h3">投稿一覧（ログイン時トップページ）</h3>
+    <h3 class="border-h3">投稿一覧</h3>
     
     <%= form_with url: search_path, method: :get, local: true do |f| %>
         <%= f.text_field :keyword, placeholder: "キーワード検索",class: "search_form", style: "width:80%" %>
@@ -28,5 +28,6 @@
                 </div>
             <% end %>
         </ul>
+        <%= paginate @crafts %>
     </div>
 </main>

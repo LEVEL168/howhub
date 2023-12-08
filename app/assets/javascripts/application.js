@@ -32,3 +32,18 @@ $(function () {
     $('.overlay').toggleClass('is-active');
   });
 });
+
+
+$(function() {
+    $(".card-list").jscroll(
+    )
+    var jscrollOption = {
+        loadingHtml: '読み込み中・・・', //記事読み込み中の表示
+        autoTrigger: true, // 自動で読み込むか否か、trueで自動、falseでボタンクリックとなる
+        nextSelector: 'a.pagination-next', // 次に読み込むコンテンツのURLのあるa要素を指定。
+        padding: 20, // 指定したコンテンツの下かた何pxで読み込むかを指定(autoTrigger: trueの場合のみ)
+        contentSelector: '.card' // 読み込む範囲の指定
+    };
+    $('.card-list').jscroll(jscrollOption);
+});
+
