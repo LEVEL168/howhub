@@ -1,0 +1,36 @@
+<header>
+    <%= render "partial/login-nav" %>
+</header>
+
+<main>
+  <h3>お問い合わせ内容</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td class="text-center" style="width: 30%;">お名前</td>
+          <td><%= @contact.name %></td>
+        </tr>
+        <tr>
+          <td class="text-center"　style="width: 30%;">メールアドレス</td>
+          <td><%= @contact.email %></td>
+        </tr>
+        <tr>
+          <td class="text-center"　style="width: 30%;">件名</td>
+          <td><%= @contact.subject %></td>
+        </tr>
+        <tr>
+          <td class="text-center">メッセージ</td>
+          <td style="white-space: pre-wrap;"><%= @contact.message %></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <%= form_with(model: @contact, url: confirm_path) do |form| %>
+      <%= form.hidden_field :name %>
+      <%= form.hidden_field :email %>
+      <%= form.hidden_field :subject %>
+      <%= form.hidden_field :message %>
+      <div><%= form.submit '送信' %></div>
+    <% end %>
+
+</main>

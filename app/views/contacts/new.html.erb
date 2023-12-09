@@ -1,0 +1,36 @@
+<header>
+    <%= render "partial/login-nav" %>
+</header>
+
+<main>
+    <%= form_with model: @contact, url: confirm_path, local: true do |form| %>
+        <%= render "partial/errors_messages", model: form.object %>
+        <div class="f-name">
+            <%= form.label :name, "お名前" %><span class="necessary">*</span>
+            <%= form.text_field :name, class: "form-text", placeholder:"お名前", style: "width:100%" %>
+            <%= form.hidden_field :name_cache %>
+        </div>
+        
+        <div class="f-mail">
+          <%= form.label :email, "メールアドレス" %><span class="necessary">*</span>
+          <%= form.text_field :email, class: "form-text", placeholder:"メールアドレス", style: "width:100%" %>
+            <%= form.hidden_field :email_cache %>
+        </div>
+        
+        <div class="f-subject">
+            <%= form.label :subject, "お問い合わせタイトル" %><span class="necessary">*</span>
+            <%= form.text_field :subject, class: "form-text", placeholder:"〇〇について等", style: "width:100%" %>
+            <%= form.hidden_field :subject_cache %>
+        </div>
+        
+        <div class="f-message">
+            <%= form.label :message, "お問い合わせ内容" %><span class="necessary">*</span>
+            <%= form.text_area :message, class: "form-text", style: "width:100%", rows: "15" %>
+            <%= form.hidden_field :message_cache %>
+        </div>
+        
+        <div class="submit-btn">
+            <%= form.submit "入力内容を確認", class: "submit" %>
+        </div>
+    <% end %>
+</main>
