@@ -35,7 +35,7 @@ $(function () {
 
 
 $(function() {
-    $(".card-list").jscroll(
+    $('.card-list').jscroll(
     )
     var jscrollOption = {
         loadingHtml: '読み込み中・・・', //記事読み込み中の表示
