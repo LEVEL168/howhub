@@ -15,8 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-console.log('hoge')
-
 
 /*global $*/
 $(function () {

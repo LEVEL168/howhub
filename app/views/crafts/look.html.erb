@@ -25,7 +25,7 @@
         <%= f.submit "検索", class: "search_submit" %>
     <% end %>
     
-    <div class="card-list jscroll">
+    <div class="card-list">
         <ul class="card"> 
             <% @crafts.each do |craft| %>
                 <div class="one-card">
@@ -40,6 +40,7 @@
         <%= paginate @crafts %>
     </div>
 </main>
+
 
 <script>
     $(function() {

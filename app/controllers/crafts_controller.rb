@@ -9,7 +9,7 @@ class CraftsController < ApplicationController
         @users = User.all
         # @crafts = Craft.all
         @craft_data = Craft.all.order(created_at: :desc)
-        @crafts = Kaminari.paginate_array(@craft_data).page(params[:page]).per(10)
+        @crafts = Kaminari.paginate_array(@craft_data).page(params[:page]).per(15)
     end
     
     def search
