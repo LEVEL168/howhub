@@ -49,12 +49,6 @@ p{
     color: red;
 }
 
-// top以外のcontainer
-// .container {
-//     width: calc(100% - 32px);
-//     margin: 0 auto;
-// }
-
 
 main {
     padding-top: 60px;
@@ -232,6 +226,20 @@ header{
         color: #21DAC7;
     }
 }
+
+
+// -------------------look スマホ版----------------------------------
+.card{
+    display: flex;
+    padding: 0px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 
 
 
@@ -549,7 +557,7 @@ header{
 }
 
 .p-links{
-        text-align: start;
+    text-align: start;
     }
     
 .my-crafts,.my-thanks{
@@ -578,7 +586,6 @@ header{
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
 }
 
 .one-card{
@@ -587,15 +594,26 @@ header{
 }
 
 .card-title{
-    display: inline;
+    display: flex;
     max-width: 100%;
-    overflow: hidden;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 22px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-name{
+    display: flex;
+    max-width: 100%;
     line-height: 22px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.card-img img{
+    text-align: center;
+    width: 210px;
+    height: 210px;
+    object-fit: cover; 
 }
 
 
@@ -728,16 +746,30 @@ header{
         padding-inline-start: 40px;
     }
     
+    .card-img img{
+       width: 190px;
+       height: 190px;
+       object-fit: cover; 
+    }
+    
     .one-card{
         display: list-item;
         margin: 12px;
     }
     
     .card-title{
-        display: inline;
         max-width: 100%;
         overflow: hidden;
-        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 22px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .card-name{
+        max-width: 100%;
+        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         line-height: 22px;
@@ -772,6 +804,7 @@ header{
 .delete-btn{
     margin: 20px;
 }
+
 
 // -------------------退会 スマホ版---------------------------------------
 .delete-con{

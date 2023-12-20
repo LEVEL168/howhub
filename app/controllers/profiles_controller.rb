@@ -9,7 +9,6 @@ class ProfilesController < ApplicationController
         thanks = Thank.where(user_id: current_user.id).pluck(:craft_id)
         @thanks = Craft.find(thanks)
         @thanks = Kaminari.paginate_array(@thanks).page(params[:page]).per(15)
-        # @thanks = Thank.where(user_id: current_user.id).page(params[:page]).per(15)
     end
     
     def edit

@@ -1,3 +1,12 @@
+<style>
+    nav.pagination {
+      display: none;
+    }
+    .scroll-list {
+      padding: 0;
+    }
+</style>
+
 <header>
     <%= render "partial/login-nav" %>
 </header>
@@ -9,25 +18,46 @@
 <% end %>
 
 <main>
-    <h3 class="border-h3">投稿一覧（ログイン時トップページ）</h3>
+    <h3 class="border-h3">投稿一覧</h3>
     
     <%= form_with url: search_path, method: :get, local: true do |f| %>
         <%= f.text_field :keyword, placeholder: "キーワード検索",class: "search_form", style: "width:80%" %>
         <%= f.submit "検索", class: "search_submit" %>
     <% end %>
     
-    
-    <!--アップされた投稿 ※「card」はあとでレイアウト充てるための仮クラス-->
-    <% @crafts.each do |craft| %>
-        <!--これで→-->
-        <div class="card">
-            <% if current_user %>
-                <%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %>
-                <%= link_to craft.title, user_craft_path(current_user, craft.id) %>
-                <%= link_to "投稿を編集", edit_user_craft_path(current_user, craft.id) %>
-                <%= link_to "投稿を削除", user_craft_path(current_user, craft.id), method: :delete, data: { confirm: '本当に登録解除しますか？' } %>
+    <div class="card-list">
+        <ul class="card"> 
+            <% @crafts.each do |craft| %>
+                <div class="one-card">
+                    <% if current_user %>
+                        <li class="card-img"><%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %></li>
+                        <li class="card-title"><%= link_to craft.title.truncate(10), user_craft_path(current_user, craft.id) %></li>
+                        <li class="card-name"><%= link_to craft.user.name.truncate(10), user_craft_path(current_user, craft.id) %></li>
+                    <% end %>
+                </div>
             <% end %>
-        </div>
-        <!--←投稿1つ分-->
-    <% end %>
+        </ul>
+        <%= paginate @crafts %>
+    </div>
 </main>
+
+
+<script>
+    $(function() {
+         var jscrollOption = {
+             loadingHtml: '読み込み中・・・', //記事読み込み中の表示
+             autoTrigger: true, // 自動で読み込むか否か、trueで自動、falseでボタンクリックとなる
+             nextSelector: 'span.next:last a', // 次に読み込むコンテンツのURLのあるa要素を指定。
+             padding: 20, // 指定したコンテンツの下かた何pxで読み込むかを指定(autoTrigger: trueの場合のみ)
+             contentSelector: '.card-list' // 読み込む範囲の指定
+         };
+    
+        $(window).on('scroll', function() {
+            scrollHeight = $(document).height();
+            scrollPosition = $(window).height() + $(window).scrollTop();
+            if (scrollHeight == scrollHeight) {
+                $('.card-list').jscroll(jscrollOption);
+            }
+        });
+    });
+</script>
