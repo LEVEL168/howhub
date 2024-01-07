@@ -3,7 +3,7 @@
 </header>
 
 <main>
-    <%= form_with model: @contact, url: confirm_path, local: true do |form| %>
+    <%= form_with(model: @contact, local: true) do |form| %>
         <%= render "partial/errors_messages", model: form.object %>
         <div class="f-name">
             <%= form.label :name, "お名前" %><span class="necessary">*</span>
@@ -30,7 +30,7 @@
         </div>
         
         <div class="submit-btn">
-            <%= form.submit "入力内容を確認", class: "submit" %>
+            <%= form.submit "送信する", class: "submit" %>
         </div>
     <% end %>
 </main>

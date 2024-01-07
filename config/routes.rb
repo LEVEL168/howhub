@@ -8,9 +8,7 @@ Rails.application.routes.draw do
   end
   resource :profile, only: %i[new show edit update]
   resources :contacts, only: [:new, :create]
-  post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
-  post 'contacts/back', to: 'contacts#back', as: 'back'
-  get 'done', to: 'contacts#done', as: 'done'
+  get "/done", to: "contacts#done", as: "done"
   get "/top", to:"crafts#top"
   get "/search", to:"crafts#search"
   get "/signup", to:"users#signup"
