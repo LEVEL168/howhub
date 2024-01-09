@@ -9,6 +9,7 @@ class ContactsController < ApplicationController
           ContactMailer.send_mail(@contact).deliver
           redirect_to done_path
         else
+          flash.now[:warning] = "*の項目を正しく入力してください"
           render new_contact_path
         end
     end

@@ -788,3 +788,31 @@ header{
     font-size: 22px;
     font-weight: normal;
 }
+
+
+// ------------------問い合わせフォーム---------------------------------------
+.done-p{
+    margin: 50px 20px;
+}
+
+.contact-h3{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.submit-btn{
+    margin-bottom: 70px;
+}
+
+
+@media (min-width: 670px){
+    .done-p{
+        font-weight: normal;
+        margin-top: 50px;
+    }
+    
+    .contact-h3{
+        margin-top: 40px;
+        // text-align: left;
+    }
+}

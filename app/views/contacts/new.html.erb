@@ -3,30 +3,32 @@
 </header>
 
 <main>
+    <img class="logo" src="/assets/logo.png" alt="HouHubロゴ画像">
+    
+    <p class="signup-p">ノウハウを共有して<br>
+      楽しく腕を磨こう！</p>
+      
+    <h3 class="contact-h3">お問い合わせフォーム</h3>
+      
     <%= form_with(model: @contact, local: true) do |form| %>
-        <%= render "partial/errors_messages", model: form.object %>
         <div class="f-name">
             <%= form.label :name, "お名前" %><span class="necessary">*</span>
             <%= form.text_field :name, class: "form-text", placeholder:"お名前", style: "width:100%" %>
-            <%= form.hidden_field :name_cache %>
         </div>
         
         <div class="f-mail">
           <%= form.label :email, "メールアドレス" %><span class="necessary">*</span>
           <%= form.text_field :email, class: "form-text", placeholder:"メールアドレス", style: "width:100%" %>
-            <%= form.hidden_field :email_cache %>
         </div>
         
         <div class="f-subject">
             <%= form.label :subject, "お問い合わせタイトル" %><span class="necessary">*</span>
-            <%= form.text_field :subject, class: "form-text", placeholder:"〇〇について等", style: "width:100%" %>
-            <%= form.hidden_field :subject_cache %>
+            <%= form.text_field :subject, class: "form-text", placeholder:"〇〇について等/200文字以内", style: "width:100%" %>
         </div>
         
         <div class="f-message">
             <%= form.label :message, "お問い合わせ内容" %><span class="necessary">*</span>
-            <%= form.text_area :message, class: "form-text", style: "width:100%", rows: "15" %>
-            <%= form.hidden_field :message_cache %>
+            <%= form.text_area :message, class: "form-text", placeholder:"2000文字以内", style: "width:100%", rows: "15" %>
         </div>
         
         <div class="submit-btn">
