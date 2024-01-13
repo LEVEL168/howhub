@@ -2,33 +2,30 @@ class CraftsController < ApplicationController
     before_action :require_login, except: [:top]
     
     def top
-       #導入ページが呼ばれたときに動作するアクション
+        
     end
     
     def look
-        #投稿一覧ページ（ログイン時トップページ）が呼ばれたときに動作するアクション
         @users = User.all
-        @crafts = Craft.all
-        
+        @craft_data = Craft.all.order(created_at: :desc)
+        @crafts = Kaminari.paginate_array(@craft_data).page(params[:page]).per(15)
     end
     
     def search
       @keywords = params[:keyword]
-      @crafts = Craft.all
+      @crafts = Craft.all.order(created_at: :desc)
       split_keywords = @keywords.split(/[[:blank:]]+/)
       split_keywords.each do |word|
-        @crafts = @crafts.where("title LIKE ? OR caption LIKE ?", "%#{word}%", "%#{word}%")
+        @crafts = @crafts.where("title LIKE ? OR caption LIKE ?", "%#{word}%", "%#{word}%").page(params[:page]).per(15)
       end
     end
     
     def new
-        #投稿作成ページが呼ばれたときに動作するアクション
         @user = User.find(params[:user_id])
         @craft = Craft.new
     end
     
     def create
-        #新しい投稿がフォームからPostされたときに動作するアクション
         @craft = Craft.new(craft_params)
         if @craft.save
             flash[:notice] = "投稿しました！" 

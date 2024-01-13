@@ -13,8 +13,19 @@
   <% if @crafts.empty? %>
     <p>該当する投稿はありません。</p>
   <% else %>
-    <% @crafts.each do |craft| %>
-      <p><%= craft.title %> <%= craft.caption %></p>
-    <% end %>
+    <div class="card-list">
+        <ul class="card"> 
+            <% @crafts.each do |craft| %>
+                <div class="one-card">
+                    <% if current_user %>
+                        <li class="card-img"><%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %></li>
+                        <li class="card-title"><%= link_to craft.title.truncate(10), user_craft_path(current_user, craft.id) %></li>
+                        <li class="card-name"><%= link_to craft.user.name.truncate(10), user_craft_path(current_user, craft.id) %></li>
+                    <% end %>
+                </div>
+            <% end %>
+        </ul>
+        <%= paginate @crafts %>
+    </div>
   <% end %>
 </main>
