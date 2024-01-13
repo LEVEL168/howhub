@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     end
   end
   resource :profile, only: %i[new show edit update]
+  resources :contacts, only: [:new, :create]
+  get "/done", to: "contacts#done", as: "done"
   get "/top", to:"crafts#top"
   get "/search", to:"crafts#search"
   get "/signup", to:"users#signup"

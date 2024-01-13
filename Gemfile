@@ -57,3 +57,7 @@ gem "mini_magick"
 gem 'rails-i18n'
 
 gem 'kaminari'
+
+gem 'dotenv-rails'
+
+gem 'mailcatcher'
