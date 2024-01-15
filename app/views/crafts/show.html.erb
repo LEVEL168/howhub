@@ -2,17 +2,27 @@
     <%= render "partial/login-nav" %>
 </header>
 
-<main>
+<main class="craft-main">
     <h2><%= @craft.title %></h2>
     
-    <p><%= (image_tag "#{@craft.image}") %></p>
+    <% if @craft.image? %>
+        <%= link_to image_url(@craft.image), "data-lightbox": image_url(@craft.image) do %>
+          <%= image_tag image_url(@craft.image), class:"craft-img", style: "width:80%" %>
+        <% end %>
+    <% else %>
+        <image src="/assets/text-only.jpg" alt="テキストのみの投稿">
+    <% end %>
+    
+    <div class="c-user">
+        <%= image_tag current_user.avatar.url, alt: "user-icon", class: "c-user-icon", size: "40x40" %>
+        <p class="c-user-name"><%= current_user.name %></p>
+    </div>
     <p><%= @craft.caption %></p>
     
     <div id="thank_btn_<%= @craft.id %>">
         <%= render "thanks/btn", craft: @craft %>
     </div>
     
-    <!--<%= link_to "投稿を編集", edit_user_craft_path(current_user, craft.id) %>-->
-    <!--<%= link_to "投稿を削除", user_craft_path(current_user, craft.id), method: :delete, data: { confirm: '本当に削除しますか？' } %>-->
+    <div class="c-space"></div>
     
 </main>
