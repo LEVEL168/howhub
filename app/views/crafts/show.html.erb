@@ -17,7 +17,8 @@
         <%= image_tag current_user.avatar.url, alt: "user-icon", class: "c-user-icon", size: "40x40" %>
         <p class="c-user-name"><%= current_user.name %></p>
     </div>
-    <p><%= @craft.caption %></p>
+    <p class="craft-time"><%= l @craft.created_at %></p>
+    <p class="c-caption"><%= @craft.caption %></p>
     
     <div id="thank_btn_<%= @craft.id %>">
         <%= render "thanks/btn", craft: @craft %>
