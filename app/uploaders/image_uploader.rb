@@ -34,7 +34,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
   
   # version :medium do
-    process resize_to_fill: [150, 150, "Center"]
+    # process resize_to_fill: [150, 150, "Center"]
   # end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
@@ -49,9 +49,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
   
-  version :content do
-    process resize_to_limit: [1000, 850]
-  end
+  # version :content do
+    process resize_to_limit: [1170, 1000]
+  # end
   
   def size_range
     0..2.megabytes

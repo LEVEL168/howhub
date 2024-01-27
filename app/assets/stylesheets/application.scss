@@ -849,3 +849,34 @@ header{
         // text-align: left;
     }
 }
+
+// -------------------個別投稿---------------------------------------
+.c-user{
+    margin: 0 auto;
+    display: flex;
+}
+
+.c-user-icon{
+    border-radius: 5px;
+}
+
+.c-user-name{
+    margin: 0 10px;
+    line-height: 40px;
+}
+
+.c-space{
+    margin: 50px 0;
+}
+
+
+.craft-time{
+    color: #808080;
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.c-caption{
+    line-break: anywhere;
+}
