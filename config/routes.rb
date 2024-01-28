@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   post "/login", to:"sessions#create"
   delete "/logout", to:"sessions#destroy"
   get "/delete", to:"users#delete"
+  post "guest_login", to: "guest_sessions#create"
 end
