@@ -2,6 +2,12 @@
     <%= render "partial/login-nav" %>
 </header>
 
+<% flash.each do |message_type, message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+<% end %>
+
 <main class="craft-main">
     <h2><%= @craft.title %></h2>
     
@@ -23,6 +29,13 @@
     <div id="thank_btn_<%= @craft.id %>">
         <%= render "thanks/btn", craft: @craft %>
     </div>
+    
+    <% if @craft.user_id === current_user.id %>
+        <div class="edit-link">
+            <span><%= link_to "投稿を編集", edit_user_craft_path(current_user, @craft.id), class: "edit-btn" %></span>
+            <span><%= link_to "投稿を削除", user_craft_path(current_user, @craft.id), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "delete-btn" %></span>
+        </div>
+    <% end %>
     
     <div class="c-space"></div>
     

@@ -44,16 +44,22 @@ class CraftsController < ApplicationController
     end
     
     def edit
-        @craft_user = User.find(params[:user_id])
+        @user = User.find(params[:user_id])
         @craft = Craft.find(params[:id])
+        unless @craft.user_id == current_user.id
+           redirect_to  user_craft_path
+        end
     end
     
     def update
         @user = User.find(params[:user_id])
         @craft = Craft.find(params[:id])
+        unless  @craft.user_id == current_user.id
+           redirect_to  user_craft_path
+        end
         if @craft.update(craft_params)
             flash[:notice] = "投稿を更新しました"
-            redirect_to root_path(@craft)
+            redirect_to user_craft_path
         else
             flash.now[:alert] = "※タイトルとキャプションを入力してください"
             render "edit"
