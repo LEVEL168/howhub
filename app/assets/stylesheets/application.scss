@@ -805,8 +805,6 @@ header{
     margin: 20px;
 }
 
-
-// -------------------退会 スマホ版---------------------------------------
 .delete-con{
     font-weight: normal;
 }
@@ -881,6 +879,34 @@ header{
     line-break: anywhere;
 }
 
+.edit-btn,.delete-btn{
+    color: #5D5D5C;
+    font-size: 14px;
+    background-color: #F7F6F6;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 100px 0;
+}
+
+.delete-btn{
+    color: #fff;
+    background-color: #000;
+}
+
+.edit-btn:hover{
+    background-color: #ccc;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.delete-btn:hover{
+    background-color: #888;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.edit-link{
+    margin-top: 30px;
+}
+
 
 // -------------------利用規約---------------------------------------
 .rule-text{
@@ -895,3 +921,4 @@ header{
 .rule-title{
     margin-top: 50px;
 }
+
