@@ -61,3 +61,5 @@ gem 'kaminari'
 gem 'dotenv-rails'
 
 gem 'mailcatcher'
+
+gem 'high_voltage'
