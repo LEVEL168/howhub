@@ -615,6 +615,10 @@ header{
     object-fit: cover; 
 }
 
+.logout-mypage{
+    display: none;
+}
+
 
 // -------------------profile PC版---------------------------------------
 @media (min-width: 670px){
@@ -779,7 +783,7 @@ header{
 }
 
 
-// -------------------退会 スマホ版---------------------------------------
+// -------------------退会--------------------------------------
 .delete-que{
     margin-top: 50px;
     font-size: 23px;
@@ -800,8 +804,8 @@ header{
     font-size: 18px;
 }
 
-.delete-btn{
-    margin: 20px;
+.unsubscribe-btn{
+    margin: 50px;
 }
 
 .delete-con{
