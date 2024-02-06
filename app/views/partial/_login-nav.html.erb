@@ -33,6 +33,12 @@
                         <%= link_to "マイページ", profile_path %>
                     <% end %>
                 </li>
+                <br>
+                <li>
+                    <% if current_user %>
+                        <%= link_to 'ログアウト', logout_path, method: :delete %>
+                    <% end %>
+                </li>
             </ul>
         </nav>
     </div>
