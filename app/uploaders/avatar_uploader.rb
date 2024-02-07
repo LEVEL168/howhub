@@ -46,11 +46,11 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
   
   version :content do
-    process resize_to_limit: [100, 100]
+    process resize_to_limit: [150, 150]
   end
   
   def size_range
-    0..500.kilobytes
+    0..1.megabytes
   end
   
 end
