@@ -2,7 +2,6 @@
     <%= render "partial/logout-nav" %>
 </header>
 
-<!--▼トップの説明から登録ボタンまで-->
 <div class="top-wrapper">
     <div class="top-container">
         <img class="logo" src="/assets/logo.png" alt="HouHubロゴ画像">
@@ -16,9 +15,8 @@
     </div>
 </div>
 
-<!--▼サービス概要部分-->
 <section class="main">
-    <div class="top-info1">
+    <div id="howhub" class="top-info1">
         <div class="top-container">
             <section>
                 <div class="pic">
@@ -89,7 +87,7 @@
             <img src="/assets/f-logo.png" alt="ロゴ画像">
         </div>
         <ul class="f-nav">
-            <li><a href="#">HouHubとは</a></li>
+            <li><%= link_to "HouHubとは", top_path(anchor: "howhub") %></li>
             <li><%= link_to '利用規約', page_path('rules') %></li>
             <li><%= link_to 'プライバシーポリシー', page_path('policy') %></li>
         </ul>
