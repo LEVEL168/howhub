@@ -7,8 +7,8 @@
         <i class="fa fa-bars fa-2x fa-fw" id="open"></i>
         
         <div class="pc-menu">
-            <span class="nav-link"><a href="#">HouHubとは</a></span>
-            <span class="nav-link"><a href="/login" class="login">ログイン</a></span>
+            <span class="nav-link"><%= link_to "HouHubとは", top_path(anchor: "howhub") %></span>
+            <span class="nav-link"><%= link_to 'ログイン', login_path %></span>
             <a href="/signup" class="register">ユーザー登録</a>
         </div>
     </div>
