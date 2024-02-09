@@ -20,8 +20,8 @@
     <% end %>
     
     <div class="c-user">
-        <%= image_tag current_user.avatar.url, alt: "user-icon", class: "c-user-icon", size: "40x40" %>
-        <p class="c-user-name"><%= current_user.name %></p>
+        <%= image_tag @user.avatar.url, alt: "user-icon", class: "c-user-icon", size: "40x40" %>
+        <p class="c-user-name"><%= @user.name %></p>
     </div>
     <p class="craft-time"><%= l @craft.created_at %></p>
     <p class="c-caption"><%= @craft.caption %></p>
