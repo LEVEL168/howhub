@@ -1,7 +1,9 @@
 class ProfilesController < ApplicationController
     before_action :require_login
+    before_action :correct_user,   only: [:edit, :update]
     
     def show
+        @user = User.find(current_user.id)
         @crafts = Craft.where(user_id: current_user.id).page(params[:page]).per(15)
     end
     
@@ -30,4 +32,11 @@ class ProfilesController < ApplicationController
     def profile_params
        params.require(:user).permit(:name, :maill, :avatar, :avatar_cache, :profile_text).merge(id: current_user.id)
     end
+    
+    private
+    
+        def correct_user
+          @user = User.find(params[:id])
+          redirect_to(root_path) unless current_user?(@user)
+        end
 end
