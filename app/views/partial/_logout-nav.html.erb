@@ -18,9 +18,15 @@
         <i class="fa fa-times fa-2x fa-fw close"></i>
         <nav>
             <ul>
-                <li><a href="#">HouHubとは</a></li>
-                <li><a href="/login">ログイン</a></li7>
-                <li><a href="/signup">ユーザー登録</a></li>
+                <li>
+                    <%= link_to "HouHubとは", top_path(anchor: "howhub") %>
+                </li>
+                <li>
+                    <%= link_to 'ログイン', login_path %>
+                </li>
+                <li>
+                    <%= link_to 'ユーザー登録', signup_path %>
+                </li>
             </ul>
         </nav>
     </div>
