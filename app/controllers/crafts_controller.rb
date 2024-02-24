@@ -68,7 +68,6 @@ class CraftsController < ApplicationController
     
     
     def show
-        # @users = User.find(params[:user_id])
         @craft = Craft.find(params[:id])
         @user = @craft.user
         @crafts = @user.crafts

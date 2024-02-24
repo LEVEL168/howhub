@@ -35,6 +35,7 @@ body{
 
 a {
     text-decoration: none;
+    color: rgb(71, 71, 71);
 }
 
 h1{
@@ -238,6 +239,11 @@ header{
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.card a:hover{
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out 0s;
 }
 
 
@@ -846,23 +852,25 @@ header{
     
     .contact-h3{
         margin-top: 40px;
-        // text-align: left;
     }
 }
 
 // -------------------個別投稿---------------------------------------
 .c-user{
-    margin: 0 auto;
-    display: flex;
+    line-height: 24px;
 }
 
 .c-user-icon{
     border-radius: 5px;
+    line-height: 24px;
+    vertical-align: -12px;
 }
 
 .c-user-name{
-    margin: 0 10px;
-    line-height: 40px;
+    font-size: 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    text-overflow: ellipsis;
 }
 
 .c-space{
@@ -907,6 +915,13 @@ header{
 
 .edit-link{
     margin-top: 30px;
+}
+
+
+@media (min-width: 670px){
+    .c-caption{
+        font-weight: normal;
+    }
 }
 
 
