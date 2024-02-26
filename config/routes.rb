@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   delete "/logout", to:"sessions#destroy"
   get "/delete", to:"users#delete"
   post "guest_login", to: "guest_sessions#create"
+  get "/user/:id", to: "users#profile"
 end

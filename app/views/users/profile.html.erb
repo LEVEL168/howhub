@@ -6,9 +6,9 @@
     <%= render "partial/errors_messages" %>
     
     <div class="profile">
-        <%= image_tag current_user.avatar.url, alt: "user-icon", class: "user_icon", size: "130x130" %>
-        <p class="profile-name"><%= current_user.name %></p>
-        <p class="profile-text"><%= current_user.profile_text %></p>
+        <%= image_tag @user.avatar.url, alt: "user-icon", class: "user_icon", size: "130x130" %>
+        <p class="profile-name"><%= @user.name %></p>
+        <p class="profile-text"><%= @user.profile_text %></p>
         <% if @user.id == current_user.id %>
             <p class="profile-link"><%= link_to "プロフィールを編集", edit_profile_path, class: "profile-edit" %></p>
         <% end %>
@@ -18,7 +18,6 @@
     
     <div class="p-links">
         <p class="my-crafts">投稿一覧</p>
-        <p class="my-thanks"><%= link_to "ありがとう一覧", new_profile_path, class: "thanks-link"%></p>
     </div>
     
     <div class="card-list">    

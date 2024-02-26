@@ -35,6 +35,11 @@ class UsersController < ApplicationController
         redirect_to root_path
     end
     
+    def profile
+        @user = User.find(params[:id])
+        @crafts = Craft.where(user_id: @user).page(params[:page]).per(15)
+    end
+    
     def user_params
         params.permit(:name, :mail, :password, :password_confirmation, :agree, :user_image)
     end
