@@ -37,7 +37,6 @@ class UsersController < ApplicationController
     
     def profile
         @user = User.find(params[:id])
-        @craft = Craft.find(params[:id])
         @crafts = Craft.where(user_id: @user).page(params[:page]).per(15)
     end
     
