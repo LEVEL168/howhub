@@ -4,13 +4,13 @@ class ProfilesController < ApplicationController
     
     def show
         @user = User.find(current_user.id)
-        @crafts = Craft.where(user_id: current_user.id).page(params[:page]).per(15)
+        @crafts = Craft.where(user_id: current_user.id).page(params[:page]).per(18)
     end
     
     def new
         thanks = Thank.where(user_id: current_user.id).pluck(:craft_id)
         @thanks = Craft.find(thanks)
-        @thanks = Kaminari.paginate_array(@thanks).page(params[:page]).per(15)
+        @thanks = Kaminari.paginate_array(@thanks).page(params[:page]).per(18)
     end
     
     def edit
