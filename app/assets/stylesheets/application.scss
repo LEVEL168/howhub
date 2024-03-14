@@ -24,7 +24,7 @@
 }
 
 body{
-    max-width: 1170;
+    max-width: 1200;
     margin: 0px;
     padding: 0px;
     font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
@@ -53,8 +53,9 @@ p{
 
 main {
     padding-top: 60px;
-    width: calc(100% - 32px);
+    // width: calc(100% - 32px);
     margin: 0 auto;
+    width: 80%;
 }
 
 
@@ -229,7 +230,7 @@ header{
 }
 
 
-// -------------------look スマホ版----------------------------------
+// -------------------look----------------------------------
 .card{
     display: flex;
     padding: 0px;
@@ -247,6 +248,14 @@ header{
 }
 
 
+@media (min-width: 670px){
+    main {
+        padding-top: 60px;
+        // width: calc(100% - 32px);
+        margin: 0 auto;
+        width: 80%;
+    }
+}    
 
 
 // -------------------edit/new --スマホ版----------------------------------
@@ -751,12 +760,11 @@ header{
         margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
-        padding-inline-start: 40px;
     }
     
     .card-img img{
-       width: 190px;
-       height: 190px;
+       width: 160px;
+       height: 160px;
        object-fit: cover; 
     }
     
