@@ -25,7 +25,7 @@
         
         <div class="f-caption">
             <%= form.label :caption, "キャプション" %><span class="necessary">*</span>
-            <%= form.text_area :caption, class: "form-text", placeholder:"投稿内容の補足や検索ワードなど", style: "width:100%", rows: "15" %>
+            <%= form.text_area :caption, class: "form-text", placeholder:"投稿内容の補足や検索ワードなど/5000文字まで", style: "width:100%", rows: "15" %>
             <%= form.hidden_field :caption_cache %>
         </div>
         
