@@ -3,7 +3,7 @@ class Craft < ApplicationRecord
     has_many :thanks, dependent: :destroy
 
     validates :title, length: { in: 1..50 }
-    validates :caption, length: { in: 1..2000 }
+    validates :caption, length: { in: 1..5000 }
     mount_uploader :image, ImageUploader
     
     def thanked_by?(user)

@@ -543,10 +543,11 @@ header{
 }
 
 .profile-text{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: normal;
-    width: calc(100% - 150px);
     margin: 15px auto;
+    line-break: anywhere;
+    white-space: pre-wrap;
 }
 
 .profile-edit{
@@ -706,10 +707,12 @@ header{
     }
     
     .profile-text{
-        font-size: 17px;
+        font-size: 14px;
         font-weight: normal;
         width: calc(100% - 250px);
         margin: 15px auto;
+        line-break: anywhere;
+        white-space: pre-wrap;
     }
     
     .profile-edit{
@@ -895,6 +898,7 @@ header{
 
 .c-caption{
     line-break: anywhere;
+    white-space: pre-wrap;
 }
 
 .edit-btn,.delete-btn{
@@ -929,6 +933,7 @@ header{
 @media (min-width: 670px){
     .c-caption{
         font-weight: normal;
+        white-space: pre-wrap;
     }
 }
 
