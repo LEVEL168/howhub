@@ -10,7 +10,7 @@
         <p class="profile-name"><%= current_user.name %></p>
         <p class="profile-text"><%= current_user.profile_text %></p>
         <% if @user.id == current_user.id %>
-            <p class="profile-link"><%= link_to "プロフィールを編集", edit_profile_path, class: "profile-edit" %></p>
+            <p class="profile-link"><%= link_to "プロフィールを編集", edit_profile_path(@user), class: "profile-edit" %></p>
         <% end %>
     </div>
     
