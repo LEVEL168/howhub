@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
     
     def new
         thanks = Thank.where(user_id: current_user.id).pluck(:craft_id)
-        @thanks = Craft.find(thanks)
+        @thanks = Craft.eager_load(:user).find(thanks)
         @thanks = Kaminari.paginate_array(@thanks).page(params[:page]).per(18)
     end
     
