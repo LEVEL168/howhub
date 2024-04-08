@@ -8,8 +8,18 @@
         
         <div class="pc-menu">
             <span class="nav-link"><%= link_to "HouHubとは", top_path(anchor: "howhub") %></span>
-            <span class="nav-link"><%= link_to 'ログイン', login_path %></span>
-            <a href="/signup" class="register">ユーザー登録</a>
+            <span class="nav-link">
+                <% if params[:login_type] == 'guest' %>
+                    <%= link_to "ログイン", login_path(:login_type => :guest) %>
+                <% else %>
+                    <%= link_to "ログイン", login_path %>
+                <% end %>
+            </span>
+            <% if params[:login_type] == 'guest' %>
+                <%= link_to "ユーザー登録", signup_path(:login_type => :guest), class: "register" %>
+            <% else %>
+                <%= link_to "ユーザー登録", signup_path, class: "register" %>
+            <% end %>
         </div>
     </div>
     
@@ -22,10 +32,18 @@
                     <%= link_to "HouHubとは", top_path(anchor: "howhub") %>
                 </li>
                 <li>
-                    <%= link_to 'ログイン', login_path %>
+                    <% if params[:login_type] == 'guest' %>
+                        <%= link_to "ログイン", login_path(:login_type => :guest) %>
+                    <% else %>
+                        <%= link_to "ログイン", login_path %>
+                    <% end %>
                 </li>
                 <li>
-                    <%= link_to 'ユーザー登録', signup_path %>
+                    <% if params[:login_type] == 'guest' %>
+                        <%= link_to "ユーザー登録", signup_path(:login_type => :guest) %>
+                    <% else %>
+                        <%= link_to "ユーザー登録", signup_path %>
+                    <% end %>
                 </li>
             </ul>
         </nav>
