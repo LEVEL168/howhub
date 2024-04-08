@@ -53,13 +53,15 @@
         </div>
     <% end %>
     
+    
     <% if params[:login_type] == 'guest' %>
-        <p class="guest">お試しで見てみる</p>
+        <p class="guest">ゲスト様はこちらからお入りください</p>
         <%= link_to "ゲストログイン", guest_login_path, method: :post, class: "login-btn" %>
     <% else %>
         <p class="signup-p2">アカウントをお持ちの方はこちら</p>
         <%= link_to "ログイン", "/login", class: "login-btn" %>
     <% end %>
+    
 </main>
 
 <div class="footer-sp">

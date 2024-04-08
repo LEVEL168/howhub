@@ -11,7 +11,11 @@
 
 <div class="register-btn">
     <div class="top-container">
-        <a href="/signup" class="register btn">無料で使ってみる</a>
+        <% if params[:login_type] == 'guest' %>
+            <%= link_to "無料で使ってみる", signup_path(:login_type => :guest), class: "register btn" %>
+        <% else %>
+            <%= link_to "無料で使ってみる", signup_path, class: "register btn" %>
+        <% end %>
     </div>
 </div>
 
@@ -75,7 +79,11 @@
     <div class="top-container">
         <h3>楽しく腕を磨こう！</h3>
         <div class="register-btn">
-            <a href="/signup" class="register btn">無料ユーザー登録</a>
+            <% if params[:login_type] == 'guest' %>
+                <%= link_to "無料ユーザー登録", signup_path(:login_type => :guest), class: "register btn" %>
+            <% else %>
+                <%= link_to "無料ユーザー登録", signup_path, class: "register btn" %>
+            <% end %>
         </div>
     </div>
 </div>
