@@ -17,7 +17,7 @@
 
 
 /*global $*/
-$(function () {
+$(document).on('turbolinks:load', function () {
   $('#open').click(function () {
     $('.overlay').toggleClass('show');
     $('.fa-bars').hide();
