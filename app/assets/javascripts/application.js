@@ -30,3 +30,8 @@ $(document).on('turbolinks:load', function () {
     $('.overlay').toggleClass('is-active');
   });
 });
+
+window.addEventListener('popstate', function (e) {
+window.location.reload();
+console.log("Reload!");
+});
