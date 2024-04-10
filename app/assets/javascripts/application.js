@@ -33,5 +33,4 @@ $(document).on('turbolinks:load', function () {
 
 window.addEventListener('popstate', function (e) {
 window.location.reload();
-console.log("Reload!");
 });
