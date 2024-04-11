@@ -36,8 +36,15 @@
         </div>
     <% end %>
     
-    <p class="signup-p2">新規ユーザー登録はこちらから</p>
-    <%= link_to "ユーザー登録", "/signup", class: "login-btn" %>
+    
+    <% if params[:login_type] == 'guest' %>
+        <p class="signup-p2">ゲスト様はこちらからお入りください</p>
+        <%= link_to "ゲストログイン", guest_login_path, method: :post, class: "login-btn" %>
+    <% else %>
+        <p class="signup-p2">新規ユーザー登録はこちらから</p>
+        <%= link_to "ユーザー登録", "/signup", class: "login-btn" %>
+    <% end %>
+    
 
 </main>
 
