@@ -14,11 +14,6 @@
                 <%= f.text_field :name, class: "form-text", style: "width:100%" %>
             </div>
             
-            <div class="p-mail p-form">
-                <%= f.label :mail, "メールアドレス" %><span class="necessary">*</span>
-                <%= f.email_field :mail, class: "form-text", style: "width:100%" %>
-            </div>
-            
             <div class="p-text">
                 <%= f.label :profile_text, "自己紹介" %><span class="necessary">*</span>
                 <%= f.text_area :profile_text, class: "form-text", placeholder:"2000文字以内", style: "width:100%", rows: "15" %>
