@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   end
   
   describe 'ユーザー新規登録' do
-      context '新規登録がうまくいくとき' do
+      context '新規登録が成功する' do
           it "内容に問題ない場合" do
             expect(@user).to be_valid
           end
@@ -32,7 +32,7 @@ RSpec.describe User, type: :model do
           end
       end
       
-      context '新規登録がうまくいかないとき' do
+      context '新規登録が失敗する' do
           it "nameが空だと登録できない" do
             user = build(:user, name: nil)
             expect(user).to be_invalid
@@ -88,7 +88,7 @@ end
 RSpec.describe 'ユーザー新規登録', type: :system do
   let(:user) { FactoryBot.create(:user) }
   
-  describe 'ログイン' do
+  describe 'ログインが成功する' do
     context 'フォームの入力値が正常' do
       it 'ログイン処理が成功する' do
         visit login_path
