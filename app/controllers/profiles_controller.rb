@@ -24,7 +24,7 @@ class ProfilesController < ApplicationController
     def update
        if correct_user
            @user = User.find(current_user.id)
-           if @user.update!(profile_params)
+           if @user.update(profile_params)
                flash[:notice] = "プロフィールを更新しました"
                redirect_to profile_path
            else
