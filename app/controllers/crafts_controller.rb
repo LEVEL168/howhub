@@ -7,7 +7,7 @@ class CraftsController < ApplicationController
     
     def look
         @craft_data = Craft.eager_load(:user).all.order(created_at: :desc)
-        @crafts = Kaminari.paginate_array(@craft_data).page(params[:page]).per(18)
+        @crafts = Kaminari.paginate_array(@craft_data).page(params[:page]).per(30)
     end
     
     def search
@@ -15,7 +15,7 @@ class CraftsController < ApplicationController
       @crafts = Craft.eager_load(:user).all.order(created_at: :desc)
       split_keywords = @keywords.split(/[[:blank:]]+/)
       split_keywords.each do |word|
-        @crafts = @crafts.where("title LIKE ? OR caption LIKE ?", "%#{word}%", "%#{word}%").page(params[:page]).per(15)
+        @crafts = @crafts.where("title LIKE ? OR caption LIKE ?", "%#{word}%", "%#{word}%").page(params[:page]).per(30)
       end
     end
     
