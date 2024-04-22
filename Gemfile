@@ -54,6 +54,10 @@ group :development do
   gem 'bullet'
 end
 
+group :production do
+  gem 'pg', '~> 1.2.3'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -72,7 +76,3 @@ gem 'high_voltage'
 gem 'capybara'
 
 gem 'selenium-webdriver'
-
-group :production do
-  gem 'pg'
-end
