@@ -74,5 +74,5 @@ gem 'capybara'
 gem 'selenium-webdriver'
 
 group :production do
-  gem 'pg', '~> 1.2.3'
+  gem 'pg'
 end
