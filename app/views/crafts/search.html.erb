@@ -17,9 +17,14 @@
       <%= f.submit "検索", class: "search_submit" %>
   <% end %>
   
-  <%= @keywords %>の検索結果
+  <% if @keywords.blank? %>
+      
+  <% else %>
+      <%= @keywords %>の検索結果
+  <% end %>
   
-  <% if @crafts.empty? %>
+  
+<% if @crafts.empty? %>
     <p>該当する投稿はありません。</p>
   <% else %>
     <div class="card-list">
@@ -34,27 +39,7 @@
                 </div>
             <% end %>
         </ul>
-        <%= paginate @crafts %>
     </div>
   <% end %>
+  
 </main>
-
-<script>
-    $(function() {
-         var jscrollOption = {
-             loadingHtml: '読み込み中・・・', //記事読み込み中の表示
-             autoTrigger: true, // 自動で読み込むか否か、trueで自動、falseでボタンクリックとなる
-             nextSelector: 'span.next:last a', // 次に読み込むコンテンツのURLのあるa要素を指定。
-             padding: 20, // 指定したコンテンツの下かた何pxで読み込むかを指定(autoTrigger: trueの場合のみ)
-             contentSelector: '.card-list' // 読み込む範囲の指定
-         };
-
-        $(window).on('scroll', function() {
-            scrollHeight = $(document).height();
-            scrollPosition = $(window).height() + $(window).scrollTop();
-            if (scrollHeight == scrollHeight) {
-                $('.card-list').jscroll(jscrollOption);
-            }
-        });
-    });
-</script>
