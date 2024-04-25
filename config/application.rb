@@ -15,6 +15,5 @@ module Howhub
     config.active_record.default_timezone = :local
     config.i18n.default_locale = :ja
     # config.eager_load_paths << Rails.root.join("extras")
-    config.hosts << 'xxx.onrender.com'
   end
 end
