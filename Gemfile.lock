@@ -353,7 +353,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mailcatcher
   mini_magick
-  pg (~> 1.2.3)
+  pg
   puma (~> 3.0)
   rails (~> 5.2.7)
   rails-i18n
