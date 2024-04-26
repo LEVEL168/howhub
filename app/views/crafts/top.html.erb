@@ -4,7 +4,7 @@
 
 <div class="top-wrapper">
     <div class="top-container">
-        <img class="logo" src="/assets/logo.png" alt="HouHubロゴ画像">
+        <%= image_tag 'logo.png', class: "logo", alt: "HouHubロゴ画像" %>
         <h1 class="desc">クリエイターのための技術共有サービス</h1>
     </div>
 </div>
@@ -24,7 +24,7 @@
         <div class="top-container">
             <section>
                 <div class="pic">
-                    <img src="/assets/info1.png" alt="HowHubコンテンツイメージ">
+                    <%= image_tag 'info1.png', alt: "HowHubコンテンツイメージ" %>
                 </div>
                 <div class="in-desc">
                     <h2>HouHub(ハウハブ)とは？</h2>
@@ -39,7 +39,7 @@
         <div class="top-container">
             <section>
                 <div class="pic">
-                    <img src="/assets/info2.png" alt="HowHubコンテンツイメージ">
+                    <%= image_tag 'info2.png', alt: "HowHubコンテンツイメージ" %>
                 </div>
                 <div class="in-desc">
                     <h2>『ものづくり』を楽しむ全てのクリエイターへ</h2>
@@ -54,7 +54,7 @@
         <div class="top-container">
             <section>
                 <div class="pic">
-                    <img src="/assets/info3.png" alt="HowHubコンテンツイメージ">
+                    <%= image_tag 'info3.png', alt: "HowHubコンテンツイメージ" %>
                 </div>
                 <div class="in-desc">
                     <h2>画像と文章でわかりやすく技術を共有できる</h2>
@@ -83,7 +83,7 @@
 <footer>
     <div class="footer-left">
         <div class="f-logo">
-            <img src="/assets/f-logo.png" alt="ロゴ画像">
+            <%= image_tag 'f-logo.png', alt: "ロゴ画像" %>
         </div>
         <ul class="f-nav">
             <li><%= link_to "HouHubとは", top_path(anchor: "howhub") %></li>
