@@ -25,3 +25,6 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
+  database: howhub_database
+  username: HowHub
+  url: <%= ENV['DATABASE_URL'] %>
