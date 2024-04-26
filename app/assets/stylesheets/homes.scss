@@ -22,11 +22,11 @@
     width: 55%;
 }
 
-.top-wrapper h1{
+.desc{
     color: #737575;
-    font-size: 25px;
+    font-size: 17px;
     line-height: 2;
-    margin-top: 13px;
+    margin-top: 16px;
 }
 
 
@@ -81,7 +81,7 @@
 }
 
 .top-info1 p{
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .top-info2{
@@ -100,7 +100,7 @@
 }
 
 .top-info2 p{
-    font-size: 17px;
+    font-size: 15px;
 }
 
 
@@ -121,7 +121,7 @@
 }
 
 .top-info3 p{
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .message-wrapper h3{
@@ -155,7 +155,7 @@ footer{
     border-bottom: 1px solid #e6e6e6;
     margin: 0;
     padding: 0;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 4.4;
 }
 
@@ -173,6 +173,7 @@ footer{
     width: calc(100% - 32px);
     margin: 0 auto;
     font-weight: normal;
+    font-size: 12px;
 }
 
 .pc-menu{

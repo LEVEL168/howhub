@@ -16,7 +16,7 @@
           <%= image_tag image_url(@craft.image), class:"craft-img", style: "width:65%" %>
         <% end %>
     <% else %>
-        <image src="/assets/text-only.jpg" alt="テキストのみの投稿">
+        <%= image_tag 'text-only.jpg', alt: "テキストのみの投稿" %>
     <% end %>
     
     <div class="c-user">
