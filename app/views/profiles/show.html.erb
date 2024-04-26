@@ -6,7 +6,7 @@
     <%= render "partial/errors_messages" %>
     
     <div class="profile">
-        <%= image_tag current_user.avatar.url, alt: "user-icon", class: "user_icon", size: "130x130" %>
+        <%= image_tag current_user.avatar.url, alt: "user-icon", class: "user_icon", size: "100x100" %>
         <p class="profile-name"><%= current_user.name %></p>
         <p class="profile-text"><%= current_user.profile_text %></p>
         <% if @user.id == current_user.id %>
