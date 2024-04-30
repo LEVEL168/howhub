@@ -25,7 +25,7 @@
         <ul class="my-card">
             <% @crafts.each do |craft| %>
                 <div class="one-card">
-                    <li class="card-img"><%= link_to (image_tag "#{craft.image}"), user_craft_path(current_user, craft.id) %></li>
+                    <li class="card-img"><%= link_to (image_tag(asset_path("#{craft.image}"))), user_craft_path(current_user, craft.id) %></li>
                     <li class="card-title"><%= link_to craft.title.truncate(10), user_craft_path(current_user, craft.id) %></li>
                 </div>
             <% end %>
