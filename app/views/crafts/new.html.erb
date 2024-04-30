@@ -9,7 +9,7 @@
         <%= form.hidden_field :user_id, value: current_user.id %>
         <%= render "partial/errors_messages", model: form.object %>
         <div class="image">
-            <%= form.label :image, "画像を追加" %>
+            <%= form.label :image, "画像を追加", class: "img-text" %>
             <%= form.file_field :image, class: "craft_img", accept: 'image/*' %>
             <%= form.hidden_field :image_cache %>
         </div>
@@ -18,13 +18,13 @@
             ※タイトルとキャプションのみの投稿も可能です</p>
         
         <div class="title">
-            <%= form.label :title, "タイトル" %><span class="necessary">*</span>
+            <%= form.label :title, "タイトル", class: "img-text" %><span class="necessary">*</span>
             <%= form.text_field :title, class: "form-text", placeholder:"タイトル", style: "width:100%" %>
             <%= form.hidden_field :title_cache %>
         </div>
         
         <div class="f-caption">
-            <%= form.label :caption, "キャプション" %><span class="necessary">*</span>
+            <%= form.label :caption, "キャプション", class: "img-text" %><span class="necessary">*</span>
             <%= form.text_area :caption, class: "form-text", placeholder:"投稿内容の補足や検索ワードなど/5000文字まで", style: "width:100%", rows: "15" %>
             <%= form.hidden_field :caption_cache %>
         </div>
