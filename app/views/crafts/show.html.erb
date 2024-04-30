@@ -9,7 +9,7 @@
 <% end %>
 
 <main class="craft-main">
-    <h2><%= @craft.title %></h2>
+    <h2 class="c-title"><%= @craft.title %></h2>
     
     <% if @craft.image? %>
         <%= link_to image_url(@craft.image), "data-lightbox": image_url(@craft.image) do %>
@@ -22,12 +22,12 @@
     <div class="c-user">
         <% if @craft.user_id === current_user.id %>
             <%= link_to profile_path(@user) do %>
-                <%= image_tag @user.avatar.url, alt: "user-icon", class: "c-user-icon", size: "40x40" %>
+                <%= image_tag @user.avatar.url, alt: "user-icon", class: "c-user-icon", size: "35x35" %>
                 <span class="c-user-name"><%= @user.name %></span>
             <% end %>
         <% else %>
             <%= link_to controller: 'users', action: 'profile', id: @user do %>
-                <%= image_tag @user.avatar.url, alt: "user-icon", class: "c-user-icon", size: "40x40" %>
+                <%= image_tag @user.avatar.url, alt: "user-icon", class: "c-user-icon", size: "35x35" %>
                 <span class="c-user-name"><%= @user.name %></span>
             <% end %>
         <% end %>
