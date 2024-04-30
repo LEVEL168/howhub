@@ -25,18 +25,18 @@
             <ul>
                 <li>
                     <% if current_user %>
-                        <%= link_to "新規投稿作成", new_user_craft_path(current_user.id) %>
+                        <%= link_to "新規投稿作成", new_user_craft_path(current_user.id), class: "sp_menu" %>
                     <% end %>
                 </li>
                 <li>
                     <% if current_user %>
-                        <%= link_to "マイページ", profile_path %>
+                        <%= link_to "マイページ", profile_path, class: "sp_menu" %>
                     <% end %>
                 </li>
                 <br>
                 <li>
                     <% if current_user %>
-                        <%= link_to 'ログアウト', logout_path, method: :delete %>
+                        <%= link_to 'ログアウト', logout_path, method: :delete, class: "sp_menu" %>
                     <% end %>
                 </li>
             </ul>

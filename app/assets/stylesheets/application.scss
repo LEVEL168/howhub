@@ -163,6 +163,10 @@ header{
     transition: all 0.2s ease-in-out 0s;
 }
 
+.sp_menu{
+    font-size: 20px;
+}
+
 // ハンバーガースライドアニメ
 .overlay{
     transform: translateY(-200vw);
@@ -535,11 +539,6 @@ header{
 
 
 // -------------------signup---------------------------------------
-.login-h3{
-    display: inline-block;
-    border-bottom: 6px solid #66cdaa;
-}
-
 .footer-sp{
     bottom: 0;
     width: calc(100% - 32px);
@@ -619,6 +618,10 @@ header{
     
 .thanks-link{
     font-size: 18px;
+}
+
+.p-name,.p-mail,.p-text,.p-image{
+    font-size: 15px;
 }
     
 .my-crafts,.my-thanks{
@@ -852,11 +855,11 @@ header{
 // -------------------退会--------------------------------------
 .delete-que{
     margin-top: 50px;
-    font-size: 23px;
+    font-size: 20px
 }
 
 .delete-con{
-    text-decoration: underline;
+    text-decoration: underline 3px;
     text-decoration-color: red;
 }
 
@@ -876,6 +879,16 @@ header{
 
 .delete-con{
     font-weight: normal;
+    font-size: 15px;
+}
+
+.necessary-delete{
+    font-size: 20px;
+    color: red;
+}
+
+#check{
+    margin-top: 30px;
 }
 
 #btn{
@@ -890,29 +903,51 @@ header{
 }
 
 
+@media (min-width: 670px){
+    .delete-que{
+        margin-top: 50px;
+        font-size: 23px;
+    }
+    
+    .delete-con{
+        text-decoration: underline;
+        text-decoration-color: red;
+    }
+    
+    .unsubscribe-btn{
+        margin: 50px;
+    }
+    
+    .delete-con{
+        font-weight: normal;
+    }
+}
+
+
 // ------------------問い合わせフォーム---------------------------------------
 .done-p{
     margin: 50px 20px;
-}
-
-.contact-h3{
-    margin-top: 40px;
-    text-align: center;
+    font-size: 15px;
 }
 
 .submit-btn{
     margin-bottom: 70px;
 }
 
+.con-text{
+    font-size: 15px;
+    font-weight: normal;
+}
 
 @media (min-width: 670px){
     .done-p{
         font-weight: normal;
         margin-top: 50px;
+        font-size: 17px;
     }
     
-    .contact-h3{
-        margin-top: 40px;
+    .con-text{
+        font-weight: bold;
     }
 }
 

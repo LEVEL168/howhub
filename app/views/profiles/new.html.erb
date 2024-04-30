@@ -23,9 +23,9 @@
         <ul class="my-card">
             <% @thanks.each do |thank|%>
                 <div class="one-card">
-                    <li class="card-img"><%= link_to (image_tag(asset_path("#{craft.image}"))),  user_craft_path(current_user,@thanks) %></li>
-                    <li class="card-title"><%= link_to thank.title.truncate(10),  user_craft_path(current_user,@thanks) %></li>
-                    <li class="card-name"><%= link_to thank.user.name.truncate(10), user_craft_path(current_user,@thanks) %></li>
+                    <li class="card-img"><%= link_to (image_tag "#{thank.image}"),  user_craft_path(current_user,@thanks) %></li>
+                    <li class="card-title"><%= link_to thank.title.truncate(8),  user_craft_path(current_user,@thanks) %></li>
+                    <li class="card-name"><%= link_to thank.user.name.truncate(8), user_craft_path(current_user,@thanks) %></li>
                 </div>
             <% end %>
         </ul>

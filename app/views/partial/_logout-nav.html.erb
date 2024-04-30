@@ -29,18 +29,18 @@
         <nav>
             <ul>
                 <li>
-                    <%= link_to "HouHubとは", top_path(anchor: "howhub") %>
+                    <%= link_to "HouHubとは", top_path(anchor: "howhub"), class: "sp_menu" %>
                 </li>
                 <li>
                     <% if params[:login_type] == 'guest' %>
-                        <%= link_to "ログイン", login_path(:login_type => :guest) %>
+                        <%= link_to "ログイン", login_path(:login_type => :guest), class: "sp_menu" %>
                     <% else %>
                         <%= link_to "ログイン", login_path %>
                     <% end %>
                 </li>
                 <li>
                     <% if params[:login_type] == 'guest' %>
-                        <%= link_to "ユーザー登録", signup_path(:login_type => :guest) %>
+                        <%= link_to "ユーザー登録", signup_path(:login_type => :guest), class: "sp_menu" %>
                     <% else %>
                         <%= link_to "ユーザー登録", signup_path %>
                     <% end %>
