@@ -1,24 +1,81 @@
-# README
+## 【HowHub】
+様々なジャンルの技法・メイキング・使用ソフトの小技や使い方など、クリエーターのノウハウだけに特化した 技術共有プラットフォームです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サービスのURL
+新規ユーザー登録画面/ログイン画面にゲストユーザーログインボタンがありますので、登録せずにお試しいただけます。
 
-Things you may want to cover:
+https://howhub.onrender.com/top/?login_type=guest
 
-* Ruby version
-    ruby 2.6.3
-* System dependencies
+## サービスへの想い
+### 『何かを生み出す人は皆全てクリエーター』
 
-* Configuration
+昨今たくさんのクリエイターに関するサービスがある中、「技術や小技"だけ"を誰でも気軽に投稿・共有できるサービス」はありません。
+既存SNS等で技術に関する小ネタを見かけることは多々ありますが、それをまた探したり管理するのは私自身骨が折れる作業でもありました。
+そこで作品ではなくノウハウだけに特化することにより、幅広い技術のデータベース化を実現するこにしました。
+ジャンルを限定せず分けることもせず、気になった投稿があれば気軽に見ていただく。
+それによって様々な知見を自身の創作に取り入れたり、新しい趣味を開拓して人生をより楽しんでほしい。
+そのような想いから制作しました。
 
-* Database creation
+## 機能一覧
+### メインの機能
+- 画像/文章の投稿機能（CRUD処理）
+- 全ての投稿一覧表示（無限スクロール）
+- 投稿検索機能
+- 各投稿の詳細閲覧
+   - 画像のポップアップ
+   - いいね/ブックマーク機能（JavaScript）
+- マイページ
+   - プロフィール作成/編集
+   - アイコン画像設定
+   - 自分の投稿一覧（ページネーション）
+   - 自分のいいね一覧（ページネーション）
+- お問い合わせフォーム（mailcatcher）
+- レスポンシブデザイン
 
-* Database initialization
+### 認証機能
+- ユーザー登録/ログイン/ログアウト
+- ゲストログイン
+- メールアドレス認証
+- プロフィール編集
+- 投稿の編集/削除
+- 自分のいいね一覧表示（自分のみ閲覧可能）
+- 退会
 
-* How to run the test suite
+## 使用技術
+|Category|Technology Stack|
+|:--|:--|
+|Frontend|HTML,CSS,JavaScript(jQuery)|
+|Backend|Ruby 2.6.8,Rails 5.2.8.1,Rspec 3.13|
+|Development Database|SQLite 1.3.6
+|Production Database|PostgreSQL 16|
+|Infrastructure|AWS cloud9,Render|
+|etc.|Git,GitHub|
 
-* Services (job queues, cache servers, search engines, etc.)
+## 今後追加したい機能
+本プロダクトは事業化を目指して制作しているため、3つのフェーズに分けて段階的に開発を進めていきます。
+### Phase1：正式ローンチに向けた追加機能
+- [ ] SNS共有機能
+- [ ] ユーザーのフォロー
+- [ ] フォローしたユーザーの投稿が閲覧できるタイムライン
+- [ ] 複数枚の画像投稿機能
+- [ ] サーバーをAWSに移行
+- [ ] データベースをS3に移行
+- [ ] viewのReact化/Rails API化
+- [ ] 投稿に対するコメント
+- [ ] 投稿の昇順/降順表示機能
 
-* Deployment instructions
+### Phase2：順次追加機能
+- [ ] 広告収益化
+- [ ] 動画投稿機能
+- [ ] 人気投稿ランキング(閲覧数)
+- [ ] 自分の投稿をいいねしたユーザー一覧の閲覧機能
+- [ ] タグの実装
+- [ ] ユーザー検索
 
-* ...
+### Phase3：商業化可能区域突入後の有償差別化
+- 有料プランの追加
+ - ブックマークのフォルダ分け
+   - この機能がノウハウ特化のアプリ内で完結していることで使いやすさを打ち出し、ユーザー獲得を狙います
+ - 人気順検索
+ - ジャンルを絞った上での各種検索機能
+- スマートフォンアプリ化
