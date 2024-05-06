@@ -1,11 +1,13 @@
-## 【HowHub】
+## 【HowHub-ハウハブ-】
 様々なジャンルの技法・メイキング・使用ソフトの小技や使い方など、クリエーターのノウハウだけに特化した 技術共有プラットフォームです。
-
+<br>
+<br>
 ## サービスのURL
 新規ユーザー登録画面/ログイン画面にゲストユーザーログインボタンがありますので、登録せずにお試しいただけます。
 
 https://howhub.onrender.com/top/?login_type=guest
-
+<br>
+<br>
 ## サービスへの想い
 ### 『何かを生み出す人は皆全てクリエーター』
 
@@ -15,7 +17,8 @@ https://howhub.onrender.com/top/?login_type=guest
 ジャンルを限定せず分けることもせず、気になった投稿があれば気軽に見ていただく。
 それによって様々な知見を自身の創作に取り入れたり、新しい趣味を開拓して人生をより楽しんでほしい。
 そのような想いから制作しました。
-
+<br>
+<br>
 ## 機能一覧
 ### メインの機能
 - 画像/文章の投稿機能（CRUD処理）
@@ -41,6 +44,8 @@ https://howhub.onrender.com/top/?login_type=guest
 - 自分のいいね一覧表示（自分のみ閲覧可能）
 - 退会
 
+<br>
+
 ## 使用技術
 |Category|Technology Stack|
 |:--|:--|
@@ -50,6 +55,8 @@ https://howhub.onrender.com/top/?login_type=guest
 |Production Database|PostgreSQL 16|
 |Infrastructure|AWS cloud9,Render|
 |etc.|Git,GitHub|
+
+<br>
 
 ## 今後追加したい機能
 本プロダクトは事業化を目指して制作しているため、3つのフェーズに分けて段階的に開発を進めていきます。
