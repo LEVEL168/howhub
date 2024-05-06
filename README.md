@@ -23,7 +23,7 @@ https://howhub.onrender.com/top/?login_type=guest
 ### メインの機能
 - 画像/文章の投稿機能（CRUD処理）
 - 全ての投稿一覧表示（無限スクロール）
-- 投稿検索機能
+- 投稿検索機能（CRUD処理）
 - 各投稿の詳細閲覧
    - 画像のポップアップ
    - いいね/ブックマーク機能（JavaScript）
@@ -79,6 +79,7 @@ https://howhub.onrender.com/top/?login_type=guest
 - [ ] 自分の投稿をいいねしたユーザー一覧の閲覧機能
 - [ ] タグの実装
 - [ ] ユーザー検索
+- [ ] CI/CDの導入
 
 ### Phase3：商業化可能区域突入後の有償差別化
 - 有料プランの追加
