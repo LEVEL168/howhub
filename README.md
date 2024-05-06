@@ -11,11 +11,11 @@ https://howhub.onrender.com/top/?login_type=guest
 ## サービスへの想い
 ### 『何かを生み出す人は皆全てクリエーター』
 
-昨今たくさんのクリエイターに関するサービスがある中、「技術や小技"だけ"を誰でも気軽に投稿・共有できるサービス」はありません。
-既存SNS等で技術に関する小ネタを見かけることは多々ありますが、それをまた探したり管理するのは私自身骨が折れる作業でもありました。
-そこで作品ではなくノウハウだけに特化することにより、幅広い技術のデータベース化を実現するこにしました。
-ジャンルを限定せず分けることもせず、気になった投稿があれば気軽に見ていただく。
-それによって様々な知見を自身の創作に取り入れたり、新しい趣味を開拓して人生をより楽しんでほしい。
+昨今たくさんのクリエイターに関するサービスがある中、「技術や小技"だけ"を誰でも気軽に投稿・共有できるサービス」はありません。  
+既存SNS等で技術に関する小ネタを見かけることは多々ありますが、それをまた探したり管理するのは私自身骨が折れる作業でもありました。  
+そこで作品ではなくノウハウだけに特化することにより、幅広い技術のデータベース化を実現するこにしました。  
+ジャンルを限定せず分けることもせず、気になった投稿があれば気軽に見ていただく。  
+それによって様々な知見を自身の創作に取り入れたり、新しい趣味を開拓して人生をより楽しんでほしい。  
 そのような想いから制作しました。
 <br>
 <br>
@@ -50,9 +50,9 @@ https://howhub.onrender.com/top/?login_type=guest
 |Category|Technology Stack|
 |:--|:--|
 |Frontend|HTML,CSS,JavaScript(jQuery)|
-|Backend|Ruby 2.6.8,Rails 5.2.8.1,Rspec 3.13|
-|Development Database|SQLite 1.3.6
-|Production Database|PostgreSQL 16|
+|Backend|Ruby2.6.8, Rails5.2.8.1, Rspec3.13|
+|Development Database|SQLite1.3.6
+|Production Database|PostgreSQL16|
 |Infrastructure|AWS cloud9,Render|
 |etc.|Git,GitHub|
 
@@ -65,6 +65,7 @@ https://howhub.onrender.com/top/?login_type=guest
 - [ ] ユーザーのフォロー
 - [ ] フォローしたユーザーの投稿が閲覧できるタイムライン
 - [ ] 複数枚の画像投稿機能
+- [ ] Web/UX/UIデザインの刷新
 - [ ] サーバーをAWSに移行
 - [ ] データベースをS3に移行
 - [ ] viewのReact化/Rails API化
