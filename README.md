@@ -1,5 +1,4 @@
-## 【HowHub-ハウハブ-】
-様々なジャンルの技法・メイキング・使用ソフトの小技や使い方など、クリエーターのノウハウだけに特化した 技術共有プラットフォームです。
+![icatch](https://github.com/LEVEL168/howhub/assets/119751986/c360b633-8b8d-44b5-9c90-f47e7c3235cc)
 <br>
 <br>
 ## サービスのURL
@@ -25,7 +24,7 @@ https://howhub.onrender.com/top/?login_type=guest
 - 全ての投稿一覧表示（無限スクロール）
 - 投稿検索機能（CRUD処理）
 - 各投稿の詳細閲覧
-   - 画像のポップアップ
+   - 画像のポップアップ(Lightbox232)
    - いいね/ブックマーク機能（JavaScript）
 - マイページ
    - プロフィール作成/編集
