@@ -1,4 +1,4 @@
-![icatch](https://github.com/LEVEL168/howhub/assets/119751986/c360b633-8b8d-44b5-9c90-f47e7c3235cc)
+![icatch](https://github.com/LEVEL168/howhub/assets/119751986/6f748ee4-9467-448f-b3b1-f47d57551569)
 <br>
 <br>
 ## サービスのURL
@@ -24,7 +24,7 @@ https://howhub.onrender.com/top/?login_type=guest
 - 全ての投稿一覧表示（無限スクロール）
 - 投稿検索機能（CRUD処理）
 - 各投稿の詳細閲覧
-   - 画像のポップアップ(Lightbox232)
+   - 画像のポップアップ(Lightbox2)
    - いいね/ブックマーク機能（JavaScript）
 - マイページ
    - プロフィール作成/編集
