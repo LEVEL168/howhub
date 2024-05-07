@@ -1,4 +1,4 @@
-![icatch](https://github.com/LEVEL168/howhub/assets/119751986/6f748ee4-9467-448f-b3b1-f47d57551569)
+![icatch](https://github.com/LEVEL168/howhub/assets/119751986/54ddd983-0f14-43fa-9b6c-3619b4ddd7db)
 <br>
 <br>
 ## サービスのURL
