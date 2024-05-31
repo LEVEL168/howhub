@@ -1,24 +1,89 @@
-# README
+![icatch](https://github.com/LEVEL168/howhub/assets/119751986/54ddd983-0f14-43fa-9b6c-3619b4ddd7db)
+<br>
+<br>
+## サービスのURL
+新規ユーザー登録画面/ログイン画面にゲストユーザーログインボタンがありますので、登録せずにお試しいただけます。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://howhub.onrender.com/top/?login_type=guest
+<br>
+<br>
+## サービスへの想い
+### 『何かを生み出す人は皆全てクリエーター』
 
-Things you may want to cover:
+昨今たくさんのクリエイターに関するサービスがある中、「技術や小技"だけ"を誰でも気軽に投稿・共有できるサービス」はありません。  
+既存SNS等で技術に関する小ネタを見かけることは多々ありますが、それをまた探したり管理するのは私自身骨が折れる作業でもありました。  
+そこで作品ではなくノウハウだけに特化することにより、幅広い技術のデータベース化を実現するこにしました。  
+ジャンルを限定せず分けることもせず、気になった投稿があれば気軽に見ていただく。  
+それによって様々な知見を自身の創作に取り入れたり、新しい趣味を開拓して人生をより楽しんでほしい。  
+そのような想いから制作しました。
+<br>
+<br>
+## 機能一覧
+### メインの機能
+- 画像/文章の投稿機能（CRUD処理）
+- 全ての投稿一覧表示（無限スクロール）
+- 投稿検索機能（CRUD処理）
+- 各投稿の詳細閲覧
+   - 画像のポップアップ(Lightbox2)
+   - いいね/ブックマーク機能（JavaScript）
+- マイページ
+   - プロフィール作成/編集
+   - アイコン画像設定
+   - 自分の投稿一覧（ページネーション）
+   - 自分のいいね一覧（ページネーション）
+- お問い合わせフォーム（mailcatcher）
+- レスポンシブデザイン
 
-* Ruby version
-    ruby 2.6.3
-* System dependencies
+### 認証機能
+- ユーザー登録/ログイン/ログアウト
+- ゲストログイン
+- メールアドレス認証
+- プロフィール編集
+- 投稿の編集/削除
+- 自分のいいね一覧表示（自分のみ閲覧可能）
+- 退会
 
-* Configuration
+<br>
 
-* Database creation
+## 使用技術
+|Category|Technology Stack|
+|:--|:--|
+|Frontend|HTML,CSS,JavaScript(jQuery)|
+|Backend|Ruby2.6.8, Rails5.2.8.1, Rspec3.13|
+|Development Database|SQLite1.3.6
+|Production Database|PostgreSQL16|
+|Infrastructure|AWS cloud9,Render|
+|etc.|Git,GitHub|
 
-* Database initialization
+<br>
 
-* How to run the test suite
+## 今後追加したい機能
+本プロダクトは事業化を目指して制作しているため、3つのフェーズに分けて段階的に開発を進めていきます。
+### Phase1：正式ローンチに向けた追加機能
+- [ ] SNS共有機能
+- [ ] ユーザーのフォロー
+- [ ] フォローしたユーザーの投稿が閲覧できるタイムライン
+- [ ] 複数枚の画像投稿機能
+- [ ] Web/UX/UIデザインの刷新
+- [ ] サーバーをAWSに移行
+- [ ] データベースをS3に移行
+- [ ] viewのReact化/Rails API化
+- [ ] 投稿に対するコメント
+- [ ] 投稿の昇順/降順表示機能
 
-* Services (job queues, cache servers, search engines, etc.)
+### Phase2：順次追加機能
+- [ ] 広告収益化
+- [ ] 動画投稿機能
+- [ ] 人気投稿ランキング(閲覧数)
+- [ ] 自分の投稿をいいねしたユーザー一覧の閲覧機能
+- [ ] タグの実装
+- [ ] ユーザー検索
+- [ ] CI/CDの導入
 
-* Deployment instructions
-
-* ...
+### Phase3：商業化可能区域突入後の有償差別化
+- 有料プランの追加
+ - ブックマークのフォルダ分け
+   - この機能がノウハウ特化のアプリ内で完結していることで使いやすさを打ち出し、ユーザー獲得を狙います
+ - 人気順検索
+ - ジャンルを絞った上での各種検索機能
+- スマートフォンアプリ化
